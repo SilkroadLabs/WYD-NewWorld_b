@@ -1,0 +1,1 @@
+[24/06/2025][08:30:43]  | -system start log[24/06/2025][08:32:59]  | -system clo server fd 0

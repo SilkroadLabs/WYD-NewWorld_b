@@ -1,0 +1,51 @@
+(26/10/2023|16:13:31) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|16:13:41) [1111|80:EE:73:9E:D8:43|10.0.0.101] : CNFAccountLogin
+(26/10/2023|16:13:43) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:13:55) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:14:07) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:14:07) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|16:14:19) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:14:22) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set level 197
+(26/10/2023|16:14:31) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:14:39) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set coin 1000000000
+(26/10/2023|16:14:39) [1111|80:EE:73:9E:D8:43|10.0.0.101] : Coin adicionado + 1000000000
+(26/10/2023|16:14:43) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:14:43) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|16:14:55) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:15:01) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set exp 3960000000
+(26/10/2023|16:15:07) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:15:09) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set ac 3200
+(26/10/2023|16:15:18) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set hp 140000
+(26/10/2023|16:15:19) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:15:19) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|16:15:20) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set hp 140000
+(26/10/2023|16:15:31) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:15:33) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set mp 140000
+(26/10/2023|16:15:43) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:15:55) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:15:55) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|16:16:07) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:16:19) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:16:31) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:16:31) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|16:16:43) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:16:55) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set magic 200000
+(26/10/2023|16:16:55) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:17:00) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +learn
+(26/10/2023|16:17:07) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:17:07) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|16:17:13) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set dam 150000
+(26/10/2023|16:17:19) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set dam 300000
+(26/10/2023|16:17:19) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|16:17:24) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set dam 500000
+(26/10/2023|16:17:31) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:28:01) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:28:01) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:28:06) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set dam 1000000
+(26/10/2023|15:28:11) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set dam 999999
+(26/10/2023|15:28:13) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:28:15) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set dam 600000
+(26/10/2023|15:28:21) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set dam 500000
+(26/10/2023|15:28:25) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:28:25) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set dam 490000
+(26/10/2023|15:28:29) [1111|80:EE

@@ -1,0 +1,5 @@
+[19/08/2024][19:30:09]  | -system start log[19/08/2024][19:32:39]  | -system Read 5 ranking entries in 0.0 seconds.
+[19/08/2024][19:32:39]  | -system -Write Ranking[19/08/2024][19:32:39]  | -system -Write Ranking[19/08/2024][19:35:09]  | -system Read 5 ranking entries in 0.0 seconds.
+[19/08/2024][19:35:09]  | -system -Write Ranking[19/08/2024][19:35:09]  | -system -Write Ranking[19/08/2024][19:37:40]  | -system Read 5 ranking entries in 0.0 seconds.
+[19/08/2024][19:37:40]  | -system -Write Ranking[19/08/2024][19:37:40]  | -system -Write Ranking[19/08/2024][19:40:10]  | -system Read 5 ranking entries in 0.0 seconds.
+[19/08/2024][19:40:10]  | -system -Write Ranking[19/08/2024][19:40:10]  | -system -Write Ranking[19/08/2024][19:42:19]  | -system clo server fd 0

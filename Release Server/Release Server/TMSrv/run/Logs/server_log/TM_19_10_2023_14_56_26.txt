@@ -1,0 +1,28 @@
+(19/10/2023|14:56:38) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(19/10/2023|14:56:50) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:56:55) [GOGO|A4:63:A1:48:E3:65|10.0.0.108] : CNFAccountLogin
+(19/10/2023|14:57:02) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:57:06) [GOGO|A4:63:A1:48:E3:65|10.0.0.108] : etc,createchar name:FSADQW 1 13
+(19/10/2023|14:57:14) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:57:14) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(19/10/2023|14:57:26) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:57:38) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:57:50) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:57:50) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(19/10/2023|14:58:02) [GOGO|A4:63:A1:48:E3:65|10.0.0.108] : adm +set coin 10000000
+(19/10/2023|14:58:02) [GOGO|A4:63:A1:48:E3:65|10.0.0.108] : Coin adicionado + 10000000
+(19/10/2023|14:58:02) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:58:14) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:58:26) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:58:26) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(19/10/2023|14:58:31) [GOGO|A4:63:A1:48:E3:65|10.0.0.108] : adm +set honra 10000
+(19/10/2023|14:58:31) [GOGO|A4:63:A1:48:E3:65|10.0.0.108] : Honra setado 10000
+(19/10/2023|14:58:38) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:58:50) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:59:02) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:59:02) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(19/10/2023|14:59:14) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:59:26) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:59:38) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(19/10/2023|14:59:38) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(19/10/2023|14:59:50) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0

@@ -1,0 +1,16 @@
+[24/06/2025][08:51:02]  | -system start log[24/06/2025][08:53:32]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][08:53:32]  | -system -Write Ranking[24/06/2025][08:53:32]  | -system -Write Ranking[24/06/2025][08:56:02]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][08:56:02]  | -system -Write Ranking[24/06/2025][08:56:02]  | -system -Write Ranking[24/06/2025][08:58:32]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][08:58:32]  | -system -Write Ranking[24/06/2025][08:58:32]  | -system -Write Ranking[24/06/2025][09:01:02]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:01:02]  | -system -Write Ranking[24/06/2025][09:01:02]  | -system -Write Ranking[24/06/2025][09:03:32]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:03:32]  | -system -Write Ranking[24/06/2025][09:03:32]  | -system -Write Ranking[24/06/2025][09:06:02]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:06:02]  | -system -Write Ranking[24/06/2025][09:06:02]  | -system -Write Ranking[24/06/2025][09:08:32]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:08:32]  | -system -Write Ranking[24/06/2025][09:08:32]  | -system -Write Ranking[24/06/2025][09:11:02]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:11:02]  | -system -Write Ranking[24/06/2025][09:11:02]  | -system -Write Ranking[24/06/2025][09:13:32]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:13:32]  | -system -Write Ranking[24/06/2025][09:13:32]  | -system -Write Ranking[24/06/2025][09:16:02]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:16:02]  | -system -Write Ranking[24/06/2025][09:16:02]  | -system -Write Ranking[24/06/2025][09:18:32]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:18:32]  | -system -Write Ranking[24/06/2025][09:18:32]  | -system -Write Ranking[24/06/2025][09:20:35]  | -system err wsa_accept request from  127.0.0.1[24/06/2025][09:20:35]  | -system err wsa_read unregistered game server socket[24/06/2025][09:21:02]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:21:02]  | -system -Write Ranking[24/06/2025][09:21:02]  | -system -Write Ranking[24/06/2025][09:23:32]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:23:32]  | -system -Write Ranking[24/06/2025][09:23:32]  | -system -Write Ranking[24/06/2025][09:26:02]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:26:02]  | -system -Write Ranking[24/06/2025][09:26:02]  | -system -Write Ranking[24/06/2025][09:28:32]  | -system Read 0 ranking entries in 0.0 seconds.
+[24/06/2025][09:28:32]  | -system -Write Ranking[24/06/2025][09:28:32]  | -system -Write Ranking[24/06/2025][09:28:48]  | -system clo server fd 0

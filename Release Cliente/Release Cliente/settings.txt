@@ -1,0 +1,28 @@
+https://wydbr.com.br/serv01.htm/update/
+Reservado
+Conte�do n�o ser� salvo
+Iniciar o Jogo
+Configura��es
+Cancelar
+WYD - www.wydconflict.com
+Iniciando o Jogo
+Verificando a atualiza��o da nova vers�o
+O jogo finaliza quando � executado?
+Se houve um erro na inicializa��o, reconecte e execute novamente.
+Baixar do Website
+Preparando para iniciar o jogo (Version %d, %03d)
+A Informa��o do Patch n�o est� dispon�vel
+A Informa��o do Patch n�o est� dispon�vel
+Salvar
+Inicializa��o
+Cancelar
+A NOVA INTERFACE est� dispon�vel no modo 640
+Selecione o arquivo em WAV que deseja escutar
+Selecione o arquivo em MP3 que deseja escutar
+Verifica��o pelo arquivo de configura��o indispon�vel
+Voc� ir� receber o arquivo %s durante o download
+Canal #1
+Canal #2
+Canal #3
+Canal #4
+Canal #5

@@ -1,0 +1,10 @@
+(24/06/2025|10:21:05) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(24/06/2025|10:21:17) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(24/06/2025|10:21:29) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(24/06/2025|10:21:41) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(24/06/2025|10:21:41) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(24/06/2025|10:21:53) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(24/06/2025|10:22:05) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(24/06/2025|10:22:17) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(24/06/2025|10:22:17) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(24/06/2025|10:22:20) [-system|-|NO_VALID_IP] : server down complete

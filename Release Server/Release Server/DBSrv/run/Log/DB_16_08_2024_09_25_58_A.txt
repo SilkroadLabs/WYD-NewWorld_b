@@ -1,0 +1,1 @@
+[16/08/2024][09:25:58]  | -system start log[16/08/2024][09:26:08]  | -system err wsa_accept request from  127.0.0.1[16/08/2024][09:26:08]  | -system err wsa_read unregistered game server socket

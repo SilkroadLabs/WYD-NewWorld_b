@@ -1,0 +1,150 @@
+(26/10/2023|15:35:13) [1111|80:EE:73:9E:D8:43|10.0.0.101] : CNFAccountLogin
+(26/10/2023|15:35:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:35:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:35:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:35:45) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1760
+(26/10/2023|15:35:45) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1760 - 0.0.0.0.0.0]
+(26/10/2023|15:35:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:35:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:36:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:36:12) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +learn
+(26/10/2023|15:36:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:36:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:36:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:36:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:36:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:37:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:37:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:37:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:37:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:37:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:37:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:37:45) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1761
+(26/10/2023|15:37:45) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1761 - 0.0.0.0.0.0]
+(26/10/2023|15:37:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:37:59) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +learn
+(26/10/2023|15:38:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:38:06) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm 
+(26/10/2023|15:38:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:38:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:38:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:38:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:38:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:38:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:39:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:39:08) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1761
+(26/10/2023|15:39:08) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1761 - 0.0.0.0.0.0]
+(26/10/2023|15:39:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:39:19) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +learn
+(26/10/2023|15:39:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:39:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:39:37) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1760
+(26/10/2023|15:39:37) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1760 - 0.0.0.0.0.0]
+(26/10/2023|15:39:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:39:49) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +learn
+(26/10/2023|15:39:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:40:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:40:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:40:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:40:18) [1111|80:EE:73:9E:D8:43|10.0.0.101] : etc,charlogout conn:1 name:Blaands
+(26/10/2023|15:40:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:40:40) [1111|80:EE:73:9E:D8:43|10.0.0.101] : CNFAccountLogin
+(26/10/2023|15:40:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:40:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:40:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:41:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:41:09) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1763
+(26/10/2023|15:41:09) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1763 - 0.0.0.0.0.0]
+(26/10/2023|15:41:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:41:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:41:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:41:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:41:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:41:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:41:55) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +secclearskill
+(26/10/2023|15:41:59) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set secclearskill
+(26/10/2023|15:42:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:42:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:42:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:42:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:42:30) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +learn
+(26/10/2023|15:42:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:42:44) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1760
+(26/10/2023|15:42:44) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1760 - 0.0.0.0.0.0]
+(26/10/2023|15:42:45) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1761
+(26/10/2023|15:42:45) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1761 - 0.0.0.0.0.0]
+(26/10/2023|15:42:46) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1762
+(26/10/2023|15:42:46) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1762 - 0.0.0.0.0.0]
+(26/10/2023|15:42:47) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +set item 1763
+(26/10/2023|15:42:47) [1111|80:EE:73:9E:D8:43|10.0.0.101] : +item created [1763 - 0.0.0.0.0.0]
+(26/10/2023|15:42:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:43:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:43:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:43:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:43:21) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +learn
+(26/10/2023|15:43:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:43:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:43:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:43:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:44:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:44:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:44:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:44:16) [1111|80:EE:73:9E:D8:43|10.0.0.101] : adm +learn
+(26/10/2023|15:44:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:44:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:44:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:44:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:45:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:45:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:45:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:45:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:45:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:45:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:46:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:46:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:46:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:46:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:46:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:46:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:46:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:47:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:47:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:47:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:47:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:47:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:47:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:47:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:48:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:48:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:48:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:48:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:48:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:48:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:49:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:49:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:49:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:49:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:49:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:49:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:49:52) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:50:04) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:50:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:50:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:50:28) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:50:40) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:50:53) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:50:53) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:51:05) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:51:16) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:51:29) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:51:29) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:51:41) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:51:53) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:52:05) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:52:05) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:52:17) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:52:29) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:52:41) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:52:41) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 4113 0 0
+(26/10/2023|15:52:53) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 3280 0 0
+(26/10/2023|15:53:05) [-system|-|NO_VALID_IP] : err,No empty mobgrid(1): 32

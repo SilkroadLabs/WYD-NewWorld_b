@@ -1,0 +1,256 @@
+[PAINEL]
+Type         = 1
+ID           = 258
+RootID       = 0
+UITexture    = -2
+Posição X    = 0
+Posição Y    = 0
+Widht        = 240
+Height       = 270
+RadiusClick  = -1442840576
+Unknown      = 4
+StartScene   = 0
+
+{
+      [TEXT]
+      Type                = 12
+      ID                  = 772
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 0
+      BG_Widht            = 240
+      BG_Height           = 20
+      Cor                 = FFFFFFAA
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 773
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 20
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 774
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 38
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 775
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 56
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 776
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 74
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 777
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 92
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 784
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 110
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 794
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 128
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 795
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 146
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 796
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 164
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 797
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 182
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 798
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 200
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 799
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 218
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 800
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 236
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 801
+      RootID              = 258
+      UITextureSetID      = -1
+      Posição X           = 0
+      Posição Y           = 254
+      BG_Widht            = 240
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFAA8888
+      Sombra              = 0
+      Unknown_7           = 1
+      StringID            = 0
+
+}
+ 

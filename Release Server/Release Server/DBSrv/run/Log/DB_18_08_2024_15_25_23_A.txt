@@ -1,0 +1,14 @@
+[18/08/2024][15:25:23]  | -system start log[18/08/2024][15:27:53]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:27:53]  | -system -Write Ranking[18/08/2024][15:27:53]  | -system -Write Ranking[18/08/2024][15:30:23]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:30:23]  | -system -Write Ranking[18/08/2024][15:30:23]  | -system -Write Ranking[18/08/2024][15:32:53]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:32:53]  | -system -Write Ranking[18/08/2024][15:32:53]  | -system -Write Ranking[18/08/2024][15:35:23]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:35:23]  | -system -Write Ranking[18/08/2024][15:35:23]  | -system -Write Ranking[18/08/2024][15:37:53]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:37:53]  | -system -Write Ranking[18/08/2024][15:37:53]  | -system -Write Ranking[18/08/2024][15:40:23]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:40:23]  | -system -Write Ranking[18/08/2024][15:40:23]  | -system -Write Ranking[18/08/2024][15:42:53]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:42:53]  | -system -Write Ranking[18/08/2024][15:42:53]  | -system -Write Ranking[18/08/2024][15:45:23]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:45:23]  | -system -Write Ranking[18/08/2024][15:45:23]  | -system -Write Ranking[18/08/2024][15:47:53]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:47:53]  | -system -Write Ranking[18/08/2024][15:47:53]  | -system -Write Ranking[18/08/2024][15:50:24]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:50:24]  | -system -Write Ranking[18/08/2024][15:50:24]  | -system -Write Ranking[18/08/2024][15:52:54]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:52:54]  | -system -Write Ranking[18/08/2024][15:52:54]  | -system -Write Ranking[18/08/2024][15:55:24]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:55:24]  | -system -Write Ranking[18/08/2024][15:55:24]  | -system -Write Ranking[18/08/2024][15:57:54]  | -system Read 5 ranking entries in 0.0 seconds.
+[18/08/2024][15:57:54]  | -system -Write Ranking[18/08/2024][15:57:54]  | -system -Write Ranking[18/08/2024][15:58:26]  | -system clo server fd 0

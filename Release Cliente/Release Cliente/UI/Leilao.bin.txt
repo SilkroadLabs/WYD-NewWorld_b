@@ -1,0 +1,572 @@
+[PAINEL]
+Type         = 1
+ID           = 565885
+RootID       = 0
+UITexture    = -1
+Posição X    = 0
+Posição Y    = 0
+Widht        = 257
+Height       = 136
+RadiusClick  = 0
+Unknown      = 4
+StartScene   = 1
+
+{
+      [HUD_UNK_16]
+      Type              = 16
+      ID                = 565225
+      RootID            = 565885
+      UITextureSetID    = -2
+      Unknown_0   = 15
+      Unknown_1   = 43
+      Unknown_2   = 40
+      Unknown_3   = 40
+      Unknown_4   = 1
+      Unknown_5   = 1
+      Unknown_6   = 0
+
+      [BUTTON]
+      Type              = 2
+      ID                = 565811
+      RootID            = 565885
+      UITextureSetID    = 280
+      Posição X         = 88
+      Posição Y         = 63
+      Widht             = 15
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 1
+      StringID          = 407
+
+      [BUTTON]
+      Type              = 2
+      ID                = 565812
+      RootID            = 565885
+      UITextureSetID    = 280
+      Posição X         = 150
+      Posição Y         = 63
+      Widht             = 15
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 1
+      StringID          = 408
+
+      [BUTTON]
+      Type              = 2
+      ID                = 565813
+      RootID            = 565885
+      UITextureSetID    = 280
+      Posição X         = 208
+      Posição Y         = 63
+      Widht             = 15
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 1
+      StringID          = 409
+
+      [BUTTON]
+      Type              = 2
+      ID                = 565886
+      RootID            = 565885
+      UITextureSetID    = -2
+      Posição X         = 55
+      Posição Y         = 120
+      Widht             = 70
+      Height            = 21
+      RadiusClick       = -1
+      Unknown           = 1
+      StringID          = 50
+
+      [BUTTON]
+      Type              = 2
+      ID                = 565887
+      RootID            = 565885
+      UITextureSetID    = -2
+      Posição X         = 155
+      Posição Y         = 120
+      Widht             = 70
+      Height            = 21
+      RadiusClick       = -1
+      Unknown           = 1
+      StringID          = 51
+
+      [TEXT]
+      Type                = 12
+      ID                  = 565888
+      RootID              = 565885
+      UITextureSetID      = -1
+      Posição X           = 60
+      Posição Y           = 87
+      BG_Widht            = 33
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFFFFFFF
+      Sombra              = 0
+      Unknown_7           = 0
+      StringID            = 77
+
+      [TEXT]
+      Type                = 12
+      ID                  = 565818
+      RootID              = 565885
+      UITextureSetID      = -1
+      Posição X           = 100
+      Posição Y           = 2
+      BG_Widht            = 33
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFFFFFFF
+      Sombra              = 0
+      Unknown_7           = 0
+      StringID            = 460
+
+      [TEXT]
+      Type                = 12
+      ID                  = 565819
+      RootID              = 565885
+      UITextureSetID      = -1
+      Posição X           = 70
+      Posição Y           = 43
+      BG_Widht            = 33
+      BG_Height           = 16
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = FFFFFFFF
+      Sombra              = 0
+      Unknown_7           = 0
+      StringID            = 461
+
+      [TEXT_BOX]
+      Type              = 13
+      ID                = 565889
+      RootID            = 565885
+      UITextureSetID    = -2
+      Posição X         = 67
+      Posição Y         = 103
+      Widht             = 102
+      Height            = 16
+      Unknown_0   = -1
+      Unknown_1   = 1
+      Unknown_2   = 0
+      Unknown_3   = 0
+      Unknown_4   = 0
+      MaxLength         = 10
+      Unknown_0   = 0
+      Unknown_1   = 1310720
+      Unknown_2   = 232916616
+      Unknown_3   = 232916616
+      Unknown_4   = 2090315872
+      Unknown_5   = 232917200
+      Unknown_6   = 1840
+      Unknown_7   = -17891602
+      Unknown_8   = 1310720
+      Unknown_9   = 232916616
+      Unknown_10   = 1310720
+      Unknown_11   = 232916616
+      Unknown_12   = 0
+      Unknown_13   = 1238952
+      Unknown_14   = 2090115921
+      Unknown_15   = 1310720
+      Unknown_16   = 2090116043
+      Unknown_17   = 232916616
+      Unknown_18   = 1310720
+      Unknown_19   = 232916624
+      Unknown_20   = 236716032
+      Unknown_21   = 29922
+      Unknown_22   = 1238616
+      Unknown_23   = 1239564
+      Unknown_24   = 1239456
+      Unknown_25   = 232916624
+      Unknown_26   = 1239604
+      Unknown_27   = 8
+      Unknown_28   = 8
+      Unknown_29   = 131108
+      Unknown_30   = 1239564
+      Unknown_31   = 167329560
+      Unknown_32   = 2090075232
+
+      [PAINEL]
+      Type         = 1
+      ID           = 565890
+      RootID       = 565885
+      UITexture    = -757
+      Posição X    = 0
+      Posição Y    = 0
+      Widht        = 250
+      Height       = 150
+      RadiusClick  = -1
+      Unknown      = 4
+      StartScene   = 0
+
+}
+
+
+[PAINEL]
+Type         = 1
+ID           = 3000011
+RootID       = 0
+UITexture    = 759
+Posição X    = 20
+Posição Y    = 50
+Widht        = 492
+Height       = 419
+RadiusClick  = -1
+Unknown      = 4
+StartScene   = 0
+
+{
+      [TEXT_BOX]
+      Type              = 13
+      ID                = 3002213
+      RootID            = 3000011
+      UITextureSetID    = -1
+      Posição X         = 30
+      Posição Y         = 58
+      Widht             = 90
+      Height            = 15
+      Unknown_0   = -1
+      Unknown_1   = 0
+      Unknown_2   = 0
+      Unknown_3   = 0
+      Unknown_4   = 0
+      MaxLength         = 10
+      Unknown_0   = 0
+      Unknown_1   = 0
+      Unknown_2   = 0
+      Unknown_3   = 0
+      Unknown_4   = 0
+      Unknown_5   = 0
+      Unknown_6   = 0
+      Unknown_7   = 0
+      Unknown_8   = 0
+      Unknown_9   = 0
+      Unknown_10   = 0
+      Unknown_11   = 0
+      Unknown_12   = 0
+      Unknown_13   = 0
+      Unknown_14   = 0
+      Unknown_15   = 0
+      Unknown_16   = 0
+      Unknown_17   = 0
+      Unknown_18   = 0
+      Unknown_19   = 0
+      Unknown_20   = 0
+      Unknown_21   = 0
+      Unknown_22   = 0
+      Unknown_23   = 0
+      Unknown_24   = 0
+      Unknown_25   = 0
+      Unknown_26   = 0
+      Unknown_27   = 0
+      Unknown_28   = 0
+      Unknown_29   = 0
+      Unknown_30   = 0
+      Unknown_31   = 0
+      Unknown_32   = 0
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3002212
+      RootID            = 3000011
+      UITextureSetID    = 758
+      Posição X         = 95
+      Posição Y         = 55
+      Widht             = 15
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 0
+
+      [PAINEL]
+      Type         = 1
+      ID           = 3202260
+      RootID       = 3000011
+      UITexture    = 754
+      Posição X    = 30
+      Posição Y    = 55
+      Widht        = 80
+      Height       = 20
+      RadiusClick  = -1
+      Unknown      = 4
+      StartScene   = 0
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3002211
+      RootID            = 3000011
+      UITextureSetID    = 760
+      Posição X         = 35
+      Posição Y         = 275
+      Widht             = 30
+      Height            = 30
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 0
+
+      [TEXT]
+      Type                = 12
+      ID                  = 3810069
+      RootID              = 3000011
+      UITextureSetID      = -1
+      Posição X           = 178
+      Posição Y           = 5
+      BG_Widht            = 65
+      BG_Height           = 15
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = 0
+      Sombra              = 0
+      Unknown_7           = 0
+      StringID            = 463
+
+      [TEXT]
+      Type                = 12
+      ID                  = 3010069
+      RootID              = 3000011
+      UITextureSetID      = -1
+      Posição X           = 290
+      Posição Y           = 349
+      BG_Widht            = 65
+      BG_Height           = 15
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = 0
+      Sombra              = 0
+      Unknown_7           = 0
+      StringID            = 367
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3010060
+      RootID            = 3000011
+      UITextureSetID    = 755
+      Posição X         = 320
+      Posição Y         = 350
+      Widht             = 11
+      Height            = 18
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 0
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3010061
+      RootID            = 3000011
+      UITextureSetID    = 756
+      Posição X         = 280
+      Posição Y         = 350
+      Widht             = 11
+      Height            = 18
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 0
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3000060
+      RootID            = 3000011
+      UITextureSetID    = -2
+      Posição X         = 0
+      Posição Y         = 105
+      Widht             = 140
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 407
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3000061
+      RootID            = 3000011
+      UITextureSetID    = -2
+      Posição X         = 0
+      Posição Y         = 140
+      Widht             = 140
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 408
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3000062
+      RootID            = 3000011
+      UITextureSetID    = -2
+      Posição X         = 0
+      Posição Y         = 170
+      Widht             = 140
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 409
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3000063
+      RootID            = 3000011
+      UITextureSetID    = -2
+      Posição X         = 0
+      Posição Y         = 205
+      Widht             = 140
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 410
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3000064
+      RootID            = 3000011
+      UITextureSetID    = -2
+      Posição X         = 10
+      Posição Y         = 240
+      Widht             = 140
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 462
+
+      [BUTTON]
+      Type              = 2
+      ID                = 3000163
+      RootID            = 3000011
+      UITextureSetID    = -2
+      Posição X         = 180
+      Posição Y         = 395
+      Widht             = 140
+      Height            = 15
+      RadiusClick       = -1
+      Unknown           = 0
+      StringID          = 2
+
+      [TEXT]
+      Type                = 12
+      ID                  = 3000069
+      RootID              = 3000011
+      UITextureSetID      = -1
+      Posição X           = 150
+      Posição Y           = 55
+      BG_Widht            = 65
+      BG_Height           = 15
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = 0
+      Sombra              = 0
+      Unknown_7           = 0
+      StringID            = 367
+
+      [TEXT]
+      Type                = 12
+      ID                  = 3300069
+      RootID              = 3000011
+      UITextureSetID      = -1
+      Posição X           = 300
+      Posição Y           = 55
+      BG_Widht            = 65
+      BG_Height           = 15
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = 0
+      Sombra              = 0
+      Unknown_7           = 0
+      StringID            = 367
+
+      [TEXT]
+      Type                = 12
+      ID                  = 3400069
+      RootID              = 3000011
+      UITextureSetID      = -1
+      Posição X           = 430
+      Posição Y           = 55
+      BG_Widht            = 65
+      BG_Height           = 15
+      Cor                 = FFFFFFFF
+      BG_Visible          = 0
+      BG_Color            = 0
+      Sombra              = 0
+      Unknown_7           = 0
+      StringID            = 367
+
+      [PAINEL]
+      Type         = 1
+      ID           = 3200060
+      RootID       = 3000011
+      UITexture    = 754
+      Posição X    = 30
+      Posição Y    = 105
+      Widht        = 80
+      Height       = 20
+      RadiusClick  = -1
+      Unknown      = 4
+      StartScene   = 0
+
+      [PAINEL]
+      Type         = 1
+      ID           = 3200061
+      RootID       = 3000011
+      UITexture    = 754
+      Posição X    = 30
+      Posição Y    = 140
+      Widht        = 80
+      Height       = 20
+      RadiusClick  = -1
+      Unknown      = 4
+      StartScene   = 0
+
+      [PAINEL]
+      Type         = 1
+      ID           = 3200062
+      RootID       = 3000011
+      UITexture    = 754
+      Posição X    = 30
+      Posição Y    = 170
+      Widht        = 80
+      Height       = 20
+      RadiusClick  = -1
+      Unknown      = 4
+      StartScene   = 0
+
+      [PAINEL]
+      Type         = 1
+      ID           = 3200063
+      RootID       = 3000011
+      UITexture    = 754
+      Posição X    = 30
+      Posição Y    = 205
+      Widht        = 80
+      Height       = 20
+      RadiusClick  = -1
+      Unknown      = 4
+      StartScene   = 0
+
+      [PAINEL]
+      Type         = 1
+      ID           = 3200064
+      RootID       = 3000011
+      UITexture    = 754
+      Posição X    = 30
+      Posição Y    = 240
+      Widht        = 80
+      Height       = 20
+      RadiusClick  = -1
+      Unknown      = 4
+      StartScene   = 0
+
+      [HUD_UNK_16]
+      Type              = 16
+      ID                = 3200011
+      RootID            = 3000011
+      UITextureSetID    = -1
+      Unknown_0   = 140
+      Unknown_1   = 90
+      Unknown_2   = 328
+      Unknown_3   = 248
+      Unknown_4   = 6
+      Unknown_5   = 8
+      Unknown_6   = 0
+
+}
+
+
