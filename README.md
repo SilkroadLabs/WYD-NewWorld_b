@@ -1,6 +1,6 @@
-# WYD New World
+# Retro-WYD
 
-This repository contains the full source code for the **WYD New World** project. The codebase includes both client and server components used to build and run the game. Source files are organized in the following folders:
+This repository contains the full source code for the **Retro-WYD** project. A complete overhaul of the TMProject with modern C++ practices. The codebase includes both client and server components used to build and run the game. Source files are organized in the following folders:
 
 - `Source Cliente/` – client source code and Visual Studio project
 - `Source Server/` – server source code and Visual Studio project
