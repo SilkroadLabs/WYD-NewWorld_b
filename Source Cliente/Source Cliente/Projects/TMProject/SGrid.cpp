@@ -28,7 +28,7 @@ enum ClientColor
 	Rosa = COLORBASE + 0xFF6EB4,
 	Cinza = COLORBASE + 0x696969,
 	AmareloPalido = COLORBASE + 0xEEE8AA,
-	RoxoRosa = COLORBASE + 0xDDA0DD // Global cor composição
+	RoxoRosa = COLORBASE + 0xDDA0DD // Global cor composiÃ§Ã£o
 };
 
 char* SGridControl::m_szParamString[49] = {
@@ -1397,7 +1397,7 @@ void SGridControl::BuyItem(int nCellX, int nCellY, int ItemIndex)
 				return;
 			}
 
-			//Enviando Informação do Filtro
+			//Enviando InformaÃ§Ã£o do Filtro
 			int ItemIndex = pItem->m_pItem->sIndex;
 
 			MSG_SendFiltro stFiltro{};
@@ -1627,7 +1627,7 @@ int SGridControl::TradeItem(int nCellX, int nCellY)
 				auto pEdit = (SEditableText*)pFScene->m_pControlContainer->FindControl(565889);
 				if (!pFScene->m_bAutotrade)
 				{
-					pFScene->m_pMessagePanel->SetMessage((char*)"Você precisa criar uma lojinha para anunciar itens!", 5000);
+					pFScene->m_pMessagePanel->SetMessage((char*)"VocÃª precisa criar uma lojinha para anunciar itens!", 5000);
 					pFScene->m_pMessagePanel->SetVisible(1, 1);
 					return 1;
 				} 
@@ -1863,18 +1863,21 @@ int SGridControl::TradeItem(int nCellX, int nCellY)
 		auto pItem = GetItem(nCellX, nCellY);
 		if (!pItem)
 			return 1;
+                constexpr size_t kCombineSlotCount = sizeof(g_pObjectManager->m_stCombineItem.Item) / sizeof(g_pObjectManager->m_stCombineItem.Item[0]);
 
-		SGridControl* pGridMyItem[13];
-		for (size_t i = 0; i < 13; ++i)
+		SGridControl* pGridMyItem[kCombineSlotCount];
+		for (size_t i = 0; i < kCombineSlotCount; ++i)
 			pGridMyItem[i] = (SGridControl*)pFScene->m_pControlContainer->FindControl(i + 65861);
 
-		// TODO: review this code latter, possible buffer overflow.
-		for (size_t i = 0; i < 13; ++i)
+		// Ensure array bounds by limiting to kCombineSlotCount.
+		for (size_t i = 0; i < kCombineSlotCount; ++i)
 		{
 			if (pGridMyItem[i] != this)
 				continue;
 
 			int Page = g_pObjectManager->m_stCombineItem.CarryPos[i] / 15;
+                        if (Page < 0 || Page >= 4)
+                                Page = 0;
 			int CellIndexX = g_pObjectManager->m_stCombineItem.CarryPos[i] % 15 % 5;
 			int CellIndexY = g_pObjectManager->m_stCombineItem.CarryPos[i] % 15 / 5;
 
@@ -1957,7 +1960,7 @@ int SGridControl::TradeItem(int nCellX, int nCellY)
 			{
 				pFScene->m_pDescPanel->m_bVisible = 0;
 			}
-			int SlotClicado = nCellX + nCellY * 8; // Calcula o índice do item com base na célula do grid
+			int SlotClicado = nCellX + nCellY * 8; // Calcula o Ã­ndice do item com base na cÃ©lula do grid
 			if (SlotClicado < MAX_SLOT_LEILAO_AUTOTRADE)
 			{
 				auto& List = pFScene->m_stAutoTrade.List[SlotClicado];
@@ -1982,7 +1985,7 @@ int SGridControl::TradeItem(int nCellX, int nCellY)
 					}
 					else
 					{
-						pFScene->m_pMessagePanel->SetMessage((char*)"Este item é seu não é possivel", 5000);
+						pFScene->m_pMessagePanel->SetMessage((char*)"Este item Ã© seu nÃ£o Ã© possivel", 5000);
 						pFScene->m_pMessagePanel->SetVisible(1, 1);
 						return 1;
 					}
@@ -2019,7 +2022,7 @@ int SGridControl::TradeItem(int nCellX, int nCellY)
 			{
 				pFScene->m_pDescPanel->m_bVisible = 0;
 			}
-			int SlotClicado = nCellX + nCellY * 8; // Calcula o índice do item com base na célula do grid
+			int SlotClicado = nCellX + nCellY * 8; // Calcula o Ã­ndice do item com base na cÃ©lula do grid
 			if (SlotClicado < MAX_SLOT_LEILAO_AUTOTRADE)
 			{
 				auto& List = pFScene->m_stAutoTrade.List[SlotClicado];
@@ -2043,7 +2046,7 @@ int SGridControl::TradeItem(int nCellX, int nCellY)
 					}
 					else
 					{
-						pFScene->m_pMessagePanel->SetMessage((char*)"Este item é seu não é possivel", 5000);
+						pFScene->m_pMessagePanel->SetMessage((char*)"Este item Ã© seu nÃ£o Ã© possivel", 5000);
 						pFScene->m_pMessagePanel->SetVisible(1, 1);
 						return 1;
 					}
@@ -3445,21 +3448,21 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 
 	if (sIndex >= 4200 && sIndex <= 4255) {
 		pFScene->m_pParamText[4]->SetTextColor(RoxoRosa);
-		pFScene->m_pParamText[4]->SetText(strFmt("EXP BÔNUS[+10%s]", Porcentagem), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("EXP BÃ”NUS[+10%s]", Porcentagem), 0);
 		pFScene->m_pParamText[5]->SetTextColor(RoxoRosa);
-		pFScene->m_pParamText[5]->SetText(strFmt("EXP BÔNUS C/ TRAJE MONTARIA[+5%s]", Porcentagem), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("EXP BÃ”NUS C/ TRAJE MONTARIA[+5%s]", Porcentagem), 0);
 	}
 	if (sIndex >= 4500 && sIndex <= 4549) {
 		pFScene->m_pParamText[3]->SetTextColor(Laranja);
-		pFScene->m_pParamText[3]->SetText(strFmt("[CLICK COM BOTÃO DIREITO PARA USAR]"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("[CLICK COM BOTÃƒO DIREITO PARA USAR]"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(RoxoRosa);
-		pFScene->m_pParamText[4]->SetText(strFmt("DROP BÔNUS[+10%s]", Porcentagem), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("DROP BÃ”NUS[+10%s]", Porcentagem), 0);
 		pFScene->m_pParamText[5]->SetTextColor(RoxoRosa);
-		pFScene->m_pParamText[5]->SetText(strFmt("DROP BÔNUS C/ TRAJE PERSO. [+5%s]", Porcentagem), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("DROP BÃ”NUS C/ TRAJE PERSO. [+5%s]", Porcentagem), 0);
 	}
 	if (sIndex == 5785) {
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Caixa mística de runas, contendo:"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("Caixa mÃ­stica de runas, contendo:"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Runas, Runas Arcanas, Alicate"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Laranja);
@@ -3469,9 +3472,9 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Azul);
 		pFScene->m_pParamText[1]->SetText(strFmt("Jogue em cima de uma runa para equipa-la"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Para retirar uma runa, clique com botão direito"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Para retirar uma runa, clique com botÃ£o direito"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Será aberto a janela de runas na sequência"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("SerÃ¡ aberto a janela de runas na sequÃªncia"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Clique nas runas que desejar retirar"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
@@ -3479,11 +3482,11 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 	}
 	if (sIndex == 5784) {
 		pFScene->m_pParamText[3]->SetTextColor(Laranja);
-		pFScene->m_pParamText[3]->SetText(strFmt("[ITEM CONSUMÍVEL]"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("[ITEM CONSUMÃVEL]"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Usado para recuperar 100%s da Energia das Runas", Porcentagem), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Laranja);
-		pFScene->m_pParamText[5]->SetText(strFmt("Uso único"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("Uso Ãºnico"), 0);
 	}
 	if (sIndex == 788 || sIndex == 789 || sIndex == 792 || sIndex == 793 || sIndex == 794) {
 		int Ref = 0;
@@ -3494,7 +3497,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		int Energy = 30 + (Ref * 10);
 
 		pFScene->m_pParamText[1]->SetTextColor(Branco);
-		pFScene->m_pParamText[1]->SetText(strFmt("Energia Máxima: %d", Energy), 0);
+		pFScene->m_pParamText[1]->SetText(strFmt("Energia MÃ¡xima: %d", Energy), 0);
 	}
 	if (sIndex == 790) {
 		int Ref = 0;
@@ -3504,23 +3507,23 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 
 		int Energy = 30 + (Ref * 10);
 		pFScene->m_pParamText[2]->SetTextColor(Branco);
-		pFScene->m_pParamText[2]->SetText(strFmt("Energia Máxima: %d", Energy), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Energia MÃ¡xima: %d", Energy), 0);
 
 		if (Ref == 0 || Ref == 1 || Ref == 2) {
 			pFScene->m_pParamText[1]->SetTextColor(Branco);
-			pFScene->m_pParamText[1]->SetText(strFmt("Dropbônus: 4%s", Porcentagem), 0);
+			pFScene->m_pParamText[1]->SetText(strFmt("DropbÃ´nus: 4%s", Porcentagem), 0);
 		}
 		if (Ref == 3 || Ref == 4) {
 			pFScene->m_pParamText[1]->SetTextColor(Branco);
-			pFScene->m_pParamText[1]->SetText(strFmt("Dropbônus: 5%s", Porcentagem), 0);
+			pFScene->m_pParamText[1]->SetText(strFmt("DropbÃ´nus: 5%s", Porcentagem), 0);
 		}
 		if (Ref == 5 || Ref == 6 || Ref == 7) {
 			pFScene->m_pParamText[1]->SetTextColor(Branco);
-			pFScene->m_pParamText[1]->SetText(strFmt("Dropbônus: 6%s", Porcentagem), 0);
+			pFScene->m_pParamText[1]->SetText(strFmt("DropbÃ´nus: 6%s", Porcentagem), 0);
 		}
 		if (Ref == 8 || Ref == 9) {
 			pFScene->m_pParamText[1]->SetTextColor(Branco);
-			pFScene->m_pParamText[1]->SetText(strFmt("Dropbônus: 7%s", Porcentagem), 0);
+			pFScene->m_pParamText[1]->SetText(strFmt("DropbÃ´nus: 7%s", Porcentagem), 0);
 		}
 	}
 	if (sIndex == 791) {
@@ -3531,32 +3534,32 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 
 		int Energy = 30 + (Ref * 10);
 		pFScene->m_pParamText[2]->SetTextColor(Branco);
-		pFScene->m_pParamText[2]->SetText(strFmt("Energia Máxima: %d", Energy), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Energia MÃ¡xima: %d", Energy), 0);
 
 		if (Ref == 0 || Ref == 1 || Ref == 2) {
 			pFScene->m_pParamText[1]->SetTextColor(Branco);
-			pFScene->m_pParamText[1]->SetText(strFmt("Expbônus: 4%s", Porcentagem), 0);
+			pFScene->m_pParamText[1]->SetText(strFmt("ExpbÃ´nus: 4%s", Porcentagem), 0);
 		}
 		if (Ref == 3 || Ref == 4) {
 			pFScene->m_pParamText[1]->SetTextColor(Branco);
-			pFScene->m_pParamText[1]->SetText(strFmt("Expbônus: 5%s", Porcentagem), 0);
+			pFScene->m_pParamText[1]->SetText(strFmt("ExpbÃ´nus: 5%s", Porcentagem), 0);
 		}
 		if (Ref == 5 || Ref == 6 || Ref == 7) {
 			pFScene->m_pParamText[1]->SetTextColor(Branco);
-			pFScene->m_pParamText[1]->SetText(strFmt("Expbônus: 6%s", Porcentagem), 0);
+			pFScene->m_pParamText[1]->SetText(strFmt("ExpbÃ´nus: 6%s", Porcentagem), 0);
 		}
 		if (Ref == 8 || Ref == 9) {
 			pFScene->m_pParamText[1]->SetTextColor(Branco);
-			pFScene->m_pParamText[1]->SetText(strFmt("Expbônus: 7%s", Porcentagem), 0);
+			pFScene->m_pParamText[1]->SetText(strFmt("ExpbÃ´nus: 7%s", Porcentagem), 0);
 		}
 	}
 	if (sIndex == 5778) {
 		pFScene->m_pParamText[1]->SetTextColor(Branco);
-		pFScene->m_pParamText[1]->SetText(strFmt("Dropbônus: 2%s", Porcentagem), 0);
+		pFScene->m_pParamText[1]->SetText(strFmt("DropbÃ´nus: 2%s", Porcentagem), 0);
 	}
 	if (sIndex == 5779) {
 		pFScene->m_pParamText[1]->SetTextColor(Branco);
-		pFScene->m_pParamText[1]->SetText(strFmt("Expbônus: 2%s", Porcentagem), 0);
+		pFScene->m_pParamText[1]->SetText(strFmt("ExpbÃ´nus: 2%s", Porcentagem), 0);
 	}
 	if (sIndex == 5614) {
 		pFScene->m_pParamText[1]->SetTextColor(Laranja);
@@ -3566,7 +3569,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[3]->SetTextColor(RoxoRosa);
 		pFScene->m_pParamText[3]->SetText(strFmt("Equipe uma saphirot da classe desejada"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Roxo);
-		pFScene->m_pParamText[4]->SetText(strFmt("Utilizável em Arch e acima"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("UtilizÃ¡vel em Arch e acima"), 0);
 	}
 	if (sIndex == 3331) {
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
@@ -3576,7 +3579,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Agrupa itens recebidos nos NPCs"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Laranja);
-		pFScene->m_pParamText[4]->SetText(strFmt("Válido Durante toda a duração do Evento"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("VÃ¡lido Durante toda a duraÃ§Ã£o do Evento"), 0);
 	}
 	if (sIndex == 5720) {
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
@@ -3584,9 +3587,9 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
 		pFScene->m_pParamText[2]->SetText(strFmt("S/ Sela, Fantasma, leve, Equip, Andaluz, Fenrir"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Porco, Javali, Lobo, Urso, Dragão Menor"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("Porco, Javali, Lobo, Urso, DragÃ£o Menor"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Dente de Sabre, Unicórnio, Pégasus, Unisus"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("Dente de Sabre, UnicÃ³rnio, PÃ©gasus, Unisus"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
 		pFScene->m_pParamText[5]->SetText(strFmt("Grifo, Hipogrifo, Grifo Sangrento"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
@@ -3600,7 +3603,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
 		pFScene->m_pParamText[2]->SetText(strFmt("Diamante, Esmeralda, Coral, Garnet"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Pedra do Sábio"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("Pedra do SÃ¡bio"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -3640,13 +3643,13 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Caixa da Sabedoria, Lágrima Angelical"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Caixa da Sabedoria, LÃ¡grima Angelical"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Coração do Kaizen, Olho de Sangue"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("CoraÃ§Ã£o do Kaizen, Olho de Sangue"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Pedra Espiritual dos Elfos"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
-		pFScene->m_pParamText[5]->SetText(strFmt("Molar do Gárgula"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("Molar do GÃ¡rgula"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -3654,7 +3657,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Alma da Fênix, Alma do Unicórnio"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Alma da FÃªnix, Alma do UnicÃ³rnio"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Imortalidade, Pedras Sephiroth"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
@@ -3664,7 +3667,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Runas para composição de Secretas"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Runas para composiÃ§Ã£o de Secretas"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -3672,13 +3675,13 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Chapéu de Teia (N/M/A)"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("ChapÃ©u de Teia (N/M/A)"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Peitoral de Teia (N/M/A)"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Calça de Teia (N/M/A)"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("CalÃ§a de Teia (N/M/A)"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
-		pFScene->m_pParamText[5]->SetText(strFmt("Braçadeira de Teia (N/M/A)"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("BraÃ§adeira de Teia (N/M/A)"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
 		pFScene->m_pParamText[6]->SetText(strFmt("Botas de Teia (N/M/A)"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
@@ -3688,15 +3691,15 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Elmo Legionário"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Elmo LegionÃ¡rio"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Armadura Legionária"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("Armadura LegionÃ¡ria"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Calça Legionária"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("CalÃ§a LegionÃ¡ria"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
-		pFScene->m_pParamText[5]->SetText(strFmt("Manoplas Legionária"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("Manoplas LegionÃ¡ria"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
-		pFScene->m_pParamText[6]->SetText(strFmt("Botas Legionária"), 0);
+		pFScene->m_pParamText[6]->SetText(strFmt("Botas LegionÃ¡ria"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -3706,7 +3709,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
 		pFScene->m_pParamText[2]->SetText(strFmt("Armadura Rake"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Calça Rake"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("CalÃ§a Rake"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Manopla Rake"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
@@ -3730,7 +3733,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Arco Guardião"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Arco GuardiÃ£o"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Dianus"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
@@ -3758,7 +3761,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Armadura Embutida (N/M/A)"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Calça Embutida (N/M/A)"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("CalÃ§a Embutida (N/M/A)"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
 		pFScene->m_pParamText[5]->SetText(strFmt("Manopla Embutida (N/M/A)"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
@@ -3774,7 +3777,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Armadura Mortal"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Calça Mortal"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("CalÃ§a Mortal"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
 		pFScene->m_pParamText[5]->SetText(strFmt("Manopla Mortal"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
@@ -3788,7 +3791,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
 		pFScene->m_pParamText[2]->SetText(strFmt("Armadura Flamejante"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Calça Flamejante"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("CalÃ§a Flamejante"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Manopla Flamejante"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
@@ -3802,7 +3805,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
 		pFScene->m_pParamText[2]->SetText(strFmt("Martelo Assassino"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Lança do Triunfo"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("LanÃ§a do Triunfo"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Solaris"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
@@ -3814,7 +3817,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
 		pFScene->m_pParamText[2]->SetText(strFmt("Asa Draconiana"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Éden, Demolidor Celestial"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("Ã‰den, Demolidor Celestial"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Foice Platinada"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
@@ -3840,7 +3843,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Armadura Elemental (N/M/A)"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Calça Elemental (N/M/A)"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("CalÃ§a Elemental (N/M/A)"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
 		pFScene->m_pParamText[5]->SetText(strFmt("Manopla Elemental (N/M/A)"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
@@ -3856,7 +3859,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Armadura do Corvo"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Calça do Corvo"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("CalÃ§a do Corvo"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
 		pFScene->m_pParamText[5]->SetText(strFmt("Manopla do Corvo"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
@@ -3868,13 +3871,13 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Armadura da Destruição"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Armadura da DestruiÃ§Ã£o"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Calça da Destruição"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("CalÃ§a da DestruiÃ§Ã£o"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Manopla da Destruição"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("Manopla da DestruiÃ§Ã£o"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
-		pFScene->m_pParamText[5]->SetText(strFmt("Bota da Destruição"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("Bota da DestruiÃ§Ã£o"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -3884,7 +3887,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
 		pFScene->m_pParamText[2]->SetText(strFmt("Martelo Assassino"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Lança do Triunfo"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("LanÃ§a do Triunfo"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
 		pFScene->m_pParamText[4]->SetText(strFmt("Cruz Sagrada"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
@@ -3922,7 +3925,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Armadura de Mytril (N/M/A)"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Calça de Mytril (N/M/A)"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("CalÃ§a de Mytril (N/M/A)"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
 		pFScene->m_pParamText[5]->SetText(strFmt("Manopla de Mytril (N/M/A)"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
@@ -3934,15 +3937,15 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Elmo Templário"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Elmo TemplÃ¡rio"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Armadura Templário"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("Armadura TemplÃ¡rio"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Calça Templário"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("CalÃ§a TemplÃ¡rio"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
-		pFScene->m_pParamText[5]->SetText(strFmt("Manopla Templário"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("Manopla TemplÃ¡rio"), 0);
 		pFScene->m_pParamText[6]->SetTextColor(Azul);
-		pFScene->m_pParamText[6]->SetText(strFmt("Bota Templário"), 0);
+		pFScene->m_pParamText[6]->SetText(strFmt("Bota TemplÃ¡rio"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -3950,13 +3953,13 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Túnica Guardiã"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("TÃºnica GuardiÃ£"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
-		pFScene->m_pParamText[3]->SetText(strFmt("Calça Guardiã"), 0);
+		pFScene->m_pParamText[3]->SetText(strFmt("CalÃ§a GuardiÃ£"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Manopla Guardiã"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("Manopla GuardiÃ£"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
-		pFScene->m_pParamText[5]->SetText(strFmt("Bota Guardiã"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("Bota GuardiÃ£"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -3968,9 +3971,9 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Espada Vorpal"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Cajado de Âmbar"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("Cajado de Ã‚mbar"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
-		pFScene->m_pParamText[5]->SetText(strFmt("Fúria Divina"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("FÃºria Divina"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -3978,13 +3981,13 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		pFScene->m_pParamText[1]->SetTextColor(Verde);
 		pFScene->m_pParamText[1]->SetText(strFmt("[ITENS INCLUSOS NO FILTRO]"), 0);
 		pFScene->m_pParamText[2]->SetTextColor(Azul);
-		pFScene->m_pParamText[2]->SetText(strFmt("Arco Guardião"), 0);
+		pFScene->m_pParamText[2]->SetText(strFmt("Arco GuardiÃ£o"), 0);
 		pFScene->m_pParamText[3]->SetTextColor(Azul);
 		pFScene->m_pParamText[3]->SetText(strFmt("Vingadora"), 0);
 		pFScene->m_pParamText[4]->SetTextColor(Azul);
-		pFScene->m_pParamText[4]->SetText(strFmt("Cajado Caótico"), 0);
+		pFScene->m_pParamText[4]->SetText(strFmt("Cajado CaÃ³tico"), 0);
 		pFScene->m_pParamText[5]->SetTextColor(Azul);
-		pFScene->m_pParamText[5]->SetText(strFmt("Força Eterna"), 0);
+		pFScene->m_pParamText[5]->SetText(strFmt("ForÃ§a Eterna"), 0);
 		pFScene->m_pParamText[7]->SetTextColor(Laranja);
 		pFScene->m_pParamText[7]->SetText(strFmt("Libera o Drop dos Itens Citados"), 0);
 	}
@@ -5022,7 +5025,7 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 		}
 		else if (m_eGridType == TMEGRIDTYPE::GRID_LEILAOSTORE || m_eGridType == TMEGRIDTYPE::GRID_LEILAOSTORE_BUY)
 		{ 
-			int selectedItemIndex = nCellX + nCellY * 8; // Calcula o índice do item com base na célula do grid
+			int selectedItemIndex = nCellX + nCellY * 8; // Calcula o Ã­ndice do item com base na cÃ©lula do grid
 
 			if (selectedItemIndex <= MAX_SLOT_LEILAO_AUTOTRADE)
 			{
@@ -5134,11 +5137,11 @@ int SGridControl::MouseOver(int nCellX, int nCellY, int bPtInRect)
 
 			if (!modded)
 			{
-				//Baús Evento
+				//BaÃºs Evento
 				if (pItem->m_pItem->sIndex == 475 || pItem->m_pItem->sIndex == 476 || pItem->m_pItem->sIndex == 480 ||
 				pItem->m_pItem->sIndex == 482 || pItem->m_pItem->sIndex == 483)
 				{
-					sprintf(szText, "Clique para trocar o Baú");
+					sprintf(szText, "Clique para trocar o BaÃº");
 				}
 
 				else if (pItem->m_pItem->sIndex >= 938 && pItem->m_pItem->sIndex <= 943 || pItem->m_pItem->sIndex == 4016)
@@ -6396,7 +6399,7 @@ void SGridControl::SwapItems(int index1, int index2)
 	{
 		std::swap(m_pItemList[index1], m_pItemList[index2]);
 
-		// Atualizar as posições no grid
+		// Atualizar as posiÃ§Ãµes no grid
 		m_pItemList[index1]->m_nCellIndexX = index1 % m_nColumnGridCount;
 		m_pItemList[index1]->m_nCellIndexY = index1 / m_nColumnGridCount;
 
@@ -6408,7 +6411,7 @@ void SGridControl::SortItems(std::function<bool(SGridControlItem*, SGridControlI
 {
 	std::sort(m_pItemList, m_pItemList + m_nNumItem, compare);
 
-	// Reorganizar o grid após a ordenação
+	// Reorganizar o grid apÃ³s a ordenaÃ§Ã£o
 	for (int i = 0; i < m_nNumItem; ++i)
 	{
 		m_pItemList[i]->m_nCellIndexX = i % m_nColumnGridCount;
