@@ -332,7 +332,7 @@ TMHuman::TMHuman(TMScene* pParentScene)
     m_pChatMsg = nullptr;
     m_stGuildMark.pGuildMark = 0;
     m_pProgressBar = nullptr;
-    m_pProgressBar1 = nullptr; //Barra de mana
+    m_pProgressBar1 = nullptr; //Mana bar
     m_pMountHPBar = nullptr;
     m_pNickNameLabel = nullptr;
     m_stGuildMark.pGuildMark = 0;
@@ -5815,11 +5815,11 @@ void TMHuman::UpdateScore(int nGuildLevel)
                 m_pNickNameLabel->SetTextColor(0xFFCCCCCC);
 
                 //Change Tab Collor
-                if (!strcmp(m_szNickName, "Torne-se Cidadão"))
+                if (!strcmp(m_szNickName, "Torne-se CidadÃ£o"))
                     m_pNickNameLabel->SetTextColor(TNColor::DeepPink);
-                else if (!strcmp(m_szNickName, "Ajudante Mágico"))
+                else if (!strcmp(m_szNickName, "Ajudante MÃ¡gico"))
                     m_pNickNameLabel->SetTextColor(TNColor::Default);
-                else if (!strcmp(m_szNickName, "Informações da Guild"))
+                else if (!strcmp(m_szNickName, "InformaÃ§Ãµes da Guild"))
                     m_pNickNameLabel->SetTextColor(TNColor::NewYellow);
                 else if (!strcmp(m_szNickName, "Compositor + 10"))
                     m_pNickNameLabel->SetTextColor(TNColor::DarkOrange);
@@ -5827,7 +5827,7 @@ void TMHuman::UpdateScore(int nGuildLevel)
                     m_pNickNameLabel->SetTextColor(TNColor::DeepPink);
                 else if (!strcmp(m_szNickName, "Compositor Anct"))
                     m_pNickNameLabel->SetTextColor(TNColor::CornBlue);
-                else if (!strcmp(m_szNickName, "Compor Poeiras e Círculos"))
+                else if (!strcmp(m_szNickName, "Compor Poeiras e CÃ­rculos"))
                     m_pNickNameLabel->SetTextColor(TNColor::CornBlue);
                 else if (!strcmp(m_szNickName, "Fale comigo para entrar!"))
                     m_pNickNameLabel->SetTextColor(TNColor::CornBlue);
@@ -5837,7 +5837,7 @@ void TMHuman::UpdateScore(int nGuildLevel)
                     m_pNickNameLabel->SetTextColor(TNColor::Default);
                 else if (!strcmp(m_szNickName, "Esfera N"))
                     m_pNickNameLabel->SetTextColor(TNColor::Default);
-                else if (!strcmp(m_szNickName, "Baú"))
+                else if (!strcmp(m_szNickName, "BaÃº"))
                     m_pNickNameLabel->SetTextColor(TNColor::CornBlue);
                 else if (!strcmp(m_szNickName, "Entrada Coliseu"))
                     m_pNickNameLabel->SetTextColor(TNColor::CornBlue);
@@ -7705,7 +7705,7 @@ void TMHuman::LabelPosition()
                         m_pTitleProgressBar->SetVisible(1);
                         m_pTitleNameLabel->SetVisible(1);
                     }
-                    else //alterado barra de hp no jogo
+                    else //changed in-game HP bar
                     {
                         if (m_cMount)
                             m_pProgressBar->SetRealPos((float)vPosInX - BASE_ScreenResize(35.0f),
@@ -16385,7 +16385,7 @@ int TMHuman::SetHumanCostume()
     m_nSkinMeshType = 0;
     memset(&m_stColorInfo, 0, sizeof(m_stColorInfo));
 
-    //Controle de Traje
+    // Costume control
 
     if (m_sCostume <= 6301)
     {

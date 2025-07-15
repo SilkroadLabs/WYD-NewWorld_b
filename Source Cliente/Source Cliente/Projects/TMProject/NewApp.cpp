@@ -497,13 +497,13 @@ HRESULT NewApp::InitDevice()
 
 void NewApp::InitServerName()
 {
-	//Nome do Server
+	// Server name
 	memset(g_szServerNameList, 0, sizeof(g_szServerNameList));
 	memset(g_nServerCountList, 0, sizeof(g_nServerCountList));
 
-	//Nome que aparece ao clicar em "Server" dentro do jogo
+	// Name displayed when clicking on "Server" in-game
 	snprintf(g_szServerNameList[2], 11, "Channel");
-	//Servidores (decrescente)
+	// Servers (descending order)
 	snprintf(g_szServerNameList[1], 11, "Oficial");
 	snprintf(g_szServerNameList[2], 11, "SvTeste");
 	snprintf(g_szServerNameList[3], 11, "TestSv");
