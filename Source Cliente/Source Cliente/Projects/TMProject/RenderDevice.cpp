@@ -14,6 +14,7 @@
 #include <io.h>
 #include <fcntl.h>
 #include <winnt.h>
+#include <stdexcept>
 
 int RenderDevice::m_nBright = 50;
 DWORD RenderDevice::m_dwCurrScreenX = 1024;
@@ -137,8 +138,13 @@ RenderDevice::RenderDevice(DWORD dwScreenWidth, DWORD dwScreenHeight, DWORD dwBi
 	m_vPickRayDir = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 	m_vPickRayOrig = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 
-	// TODO: add a throw here if the g_pDevice is not null
-	g_pDevice = this;
+        // Verify global device pointer is not already assigned
+        if (g_pDevice != nullptr)
+        {
+                LOG_WRITELOG("RenderDevice already initialized\r\n");
+                throw std::runtime_error("RenderDevice already initialized");
+        }
+        g_pDevice = this;
 }
 
 RenderDevice::~RenderDevice()
