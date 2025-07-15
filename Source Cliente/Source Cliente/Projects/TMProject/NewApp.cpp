@@ -168,7 +168,7 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 	}
 
 	int nWindow = -1;
-	Config.Config[0] = 2;
+	// Config.Config[0] = 2;
 	nResIndex = Config.Config[0];
 
 	TMSkinMesh::m_nSmooth = Config.Config[1];
@@ -201,8 +201,8 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 	g_nKeyType = Config.Config[12];
 	nCameraView = Config.Config[13];
 	m_nCameraView = Config.Config[13];
-	m_nCameraView = 1;
-	g_UIVer = 2;
+	// m_nCameraView = 1;
+	// g_UIVer = 2;
 	D3DDevice::m_bDxt = nDXT == 0;
 	RenderDevice::m_bCameraRot = nCameraRotate;
 	D3DDevice::m_nMipMap = nMipMap;
@@ -212,7 +212,7 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 	if (nBright > 100)
 		nBright = 100;
 	RenderDevice::m_nBright = nBright;
-	TMSkinMesh::m_nSmooth = 1;
+	// TMSkinMesh::m_nSmooth = 1;
 
 	if (nCursor == 1)
 		nCursor = 0;
@@ -886,7 +886,7 @@ HRESULT NewApp::MsgProc(HWND hWnd, DWORD uMsg, DWORD wParam, int lParam)
 					}
 				}
 
-				if (!strcmp(static_cast<TMFieldScene*>(g_pCurrentScene)->m_pTextIMEDesc->GetText(), "Î"))
+				if (!strcmp(static_cast<TMFieldScene*>(g_pCurrentScene)->m_pTextIMEDesc->GetText(), "ÃŽ"))
 					SendMessage(hWnd, 0x281, 0, -1073741809);
 				else
 					SendMessage(hWnd, 0x281u, 0, -1);
@@ -1233,7 +1233,7 @@ HRESULT NewApp::MsgProc(HWND hWnd, DWORD uMsg, DWORD wParam, int lParam)
 	{
 		if (g_pCurrentScene != nullptr)
 		{
-			if (strcmp(g_pCurrentScene->m_pTextIMEDesc->GetText(), "Î"))
+			if (strcmp(g_pCurrentScene->m_pTextIMEDesc->GetText(), "ÃŽ"))
 				SendMessageA(hWnd, 0x281, 0, -1073741809);
 			else
 				SendMessageA(hWnd, 0x281, 0, -1);
