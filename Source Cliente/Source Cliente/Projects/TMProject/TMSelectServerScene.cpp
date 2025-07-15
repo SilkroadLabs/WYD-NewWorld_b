@@ -398,7 +398,7 @@ int TMSelectServerScene::OnControlEvent(unsigned int idwControlID, unsigned int 
 		m_pMessagePanel->SetMessage(g_pMessageStringTable[23], 0);
 		m_pMessagePanel->SetVisible(1, 0);
 
-		m_pMessagePanel->m_nPosX = BASE_ScreenResize(210.0f);//alterado//alterado 2.0
+		m_pMessagePanel->m_nPosX = BASE_ScreenResize(210.0f);// adjusted (version 2.0)
 
 		if (m_bAdmit == 1 && nIndexN == m_nAdmitGroup)
 		{
@@ -453,7 +453,7 @@ int TMSelectServerScene::OnControlEvent(unsigned int idwControlID, unsigned int 
 
 		SListBox* pServerList = m_pNServerList;
 
-		//ServerName Lista de nomes dos servers
+		// ServerName list of servers
 		if (pServerList)
 		{
 			pServerList->Empty();
@@ -667,7 +667,7 @@ int TMSelectServerScene::OnCharEvent(char iCharCode, int lParam)
 	{
 	case VK_TAB:
 
-		//// teste debug centralização
+		//// teste debug centralizaÃ§Ã£o
 		//m_pMessagePanel->SetMessage("0.0.0.0.0.0.0.0.0.0", 200000);
 		//m_pMessagePanel->SetVisible(1, 0);
 

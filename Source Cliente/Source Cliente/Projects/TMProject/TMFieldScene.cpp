@@ -618,8 +618,8 @@ int TMFieldScene::m_bAutotrade = 0;
 int TMFieldScene::m_bCurrentSlotLeilao = 0;
 int TMFieldScene::m_bCurrentTipeLeilao = -1;
 int TMFieldScene::m_nCurrentSlobankLeilao;
-int TMFieldScene::m_nLeilaoStoreCurrentPage = 0; // P·gina atual
-int TMFieldScene::m_nLeilaoStoreTotalPages = 0;  // Total de p·ginas
+int TMFieldScene::m_nLeilaoStoreCurrentPage = 0; // P√°gina atual
+int TMFieldScene::m_nLeilaoStoreTotalPages = 0;  // Total de p√°ginas
 
 int TMFieldScene::OnKeyVisibleLeilao(char iCharCode, int lParam)
 {
@@ -709,7 +709,7 @@ void TMFieldScene::UpdateElementesLeilaoStore() {
 
 	int slotBank = 0;
 
-	unsigned int enableItem = 0xFFFFFFFF;//inicia defalut 
+	unsigned int enableItem = 0xFFFFFFFF;// default initialization 
 
 #pragma region Labels
 	auto LabelCurrentPage = static_cast<SText*>(m_pControlContainer->FindControl(3010069));
@@ -734,7 +734,7 @@ void TMFieldScene::UpdateElementesLeilaoStore() {
 		switch (m_bCurrentTipeLeilao)
 		{
 		case 0:
-			LabelTituloPanel->SetText((char*)"Itens em negociaÁ„o", 0);
+			LabelTituloPanel->SetText((char*)"Itens em negocia√ß√£o", 0);
 			break;
 		case 1:
 			LabelTituloPanel->SetText((char*)"Negociados por Donate", 0);
@@ -746,7 +746,7 @@ void TMFieldScene::UpdateElementesLeilaoStore() {
 			LabelTituloPanel->SetText((char*)"Negociados por Barras(1b)", 0);
 			break;
 		case -1:
-			LabelTituloPanel->SetText((char*)"Lojinha - Leil„o Store", 0);
+			LabelTituloPanel->SetText((char*)"Lojinha - Leil√£o Store", 0);
 			break;
 		}
 	}
@@ -829,8 +829,8 @@ void TMFieldScene::UpdateElementesLeilaoStore() {
 					enableItem = 0xFFFF0000;
 				}
 
-				int Page = m_stAutoTrade.List[i].SlotBank / 40; // Determina a p·gina do item
-				if (Page < 4) // Verifica se a p·gina est· dentro do intervalo v·lido
+				int Page = m_stAutoTrade.List[i].SlotBank / 40; // Determina a p√°gina do item
+				if (Page < 4) // Verifica se a p√°gina est√° dentro do intervalo v√°lido
 				{
 					int mod40 = m_stAutoTrade.List[i].SlotBank % 40;
 					int x = mod40 % 5;
@@ -864,12 +864,12 @@ void TMFieldScene::UpdateElementesLeilaoStore() {
 
 }
 
-void TMFieldScene::SendReqLeilaoBuy()//aqui compra o item
+void TMFieldScene::SendReqLeilaoBuy()//here the item is purchased
 {
 	 
 	pStartNegotiation sendPacket = {};
 
-	// Preenchendo o pacote
+	// Filling the packet
 	sendPacket.Header.ID = g_pObjectManager->m_dwCharID;
 	sendPacket.Header.Type = MSG_ReqBuy_Opcode;
 	sendPacket.targetPlayerId = m_stAutoTrade.List[m_bCurrentSlotLeilao].OwnerId;
@@ -889,14 +889,14 @@ void TMFieldScene::SendReqLeilaoBuy()//aqui compra o item
 	std::cout << "  SlotBank  " << static_cast<int>(m_stAutoTrade.List[m_bCurrentSlotLeilao].SlotBank) << "  \n  ";
 
 	std::cout << "  *******************  " << "  \n  ";
-	// Definindo o tamanho do pacote
+	// Setting the packet size
 	sendPacket.Header.Size = sizeof(pStartNegotiation);
 
-	printf("Pacote de inÌcio de negociaÁ„o preparado.\n");
-	SendOneMessage((char*)&sendPacket, sizeof(pStartNegotiation));
-}
+	unsigned int enableItem = 0xFFFFFFFF;// default initialization
+	// Clears the grid once before adding all items
+		// Adds the item to the grid na posio correta
 
-int TMFieldScene::OnReceivingLeilaoStores(MSG_STANDARD* pStd)
+			// Adds the item to the grid in the correct position
 { 
 	 
 
@@ -925,11 +925,11 @@ int TMFieldScene::OnReceivingLeilaoStores(MSG_STANDARD* pStd)
 
 	for (int i = 0; i < MAX_SLOT_LEILAO_AUTOTRADE; ++i) {
 
-		// Verifica se o item È v·lido
+		// Verifica se o item √© v√°lido
 		if (pAutoTrade->List[i].OwnerId <= 0)
 			continue;
 
-		// Copia as informaÁıes do item recebido para a estrutura local
+		// Copia as informa√ß√µes do item recebido para a estrutura local
 		memcpy(&m_stAutoTrade.List[i], &pAutoTrade->List[i], sizeof(LeilaoStoreAux));
 
 		if (pAutoTrade->List[i].Item.sIndex <= 0)
@@ -940,19 +940,19 @@ int TMFieldScene::OnReceivingLeilaoStores(MSG_STANDARD* pStd)
 		pGridLeilaoStore->m_nTradeMoney = pAutoTrade->List[i].Price;
 		//pGridLeilaoStore->m_eGridType = TMEGRIDTYPE::GRID_LEILAOSTORE;
 
-		// Atualiza informaÁıes de paginaÁ„o
+		// Atualiza informa√ß√µes de pagina√ß√£o
 		if (pAutoTrade->CurrentPage > 0)
 			m_nLeilaoStoreCurrentPage = pAutoTrade->CurrentPage;
 
 		if (pAutoTrade->TotalPages > 0)
 			m_nLeilaoStoreTotalPages = pAutoTrade->TotalPages;
 
-		// Adiciona o item ao grid na posiÁ„o correta
+		// Adiciona o item ao grid na posi√ß√£o correta
 		if (pAutoTrade->List[i].Item.sIndex > 0) {
 			STRUCT_ITEM* pItemRecovery = new STRUCT_ITEM;
 			memcpy(pItemRecovery, &m_stAutoTrade.List[i].Item, sizeof(STRUCT_ITEM));
 
-			// Calcula a posiÁ„o no grid
+			// Calcula a posi√ß√£o no grid
 			auto nx = i % 8;
 			auto ny = i / 8;
 
@@ -971,25 +971,25 @@ void TMFieldScene::AltLeilaoAction(int action)
 {
 	for (int nCargoIndex = 0; nCargoIndex < 160; ++nCargoIndex)
 	{
-		// Verifica se o item no Ìndice atual È v·lido
+		// Verifica se o item no √≠ndice atual √© v√°lido
 		if (g_pObjectManager->m_stItemCargo[nCargoIndex].sIndex)
 		{
-			int Page = nCargoIndex / 40; // Determina a p·gina do item
-			if (Page < 4) // Verifica se a p·gina est· dentro do intervalo v·lido
+			int Page = nCargoIndex / 40; // Determina a p√°gina do item
+			if (Page < 4) // Verifica se a p√°gina est√° dentro do intervalo v√°lido
 			{
-				// Calcula as coordenadas x e y na p·gina
+				// Calcula as coordenadas x e y na p√°gina
 				int mod40 = nCargoIndex % 40;
 				int x = mod40 % 5;
 				int y = mod40 / 5;
 
-				// ObtÈm o item da grade
+				// Obt√©m o item da grade
 				auto bb = m_pCargoGridList[Page]->GetItem(x, y);
 
-				// Verifica se o item È v·lido
+				// Verifica se o item √© v√°lido
 				if (!bb)
-					continue; // Pular itens que n„o s„o v·lidos
+					continue; // Pular itens que n√£o s√£o v√°lidos
 
-				// Atualiza a cor do item para vermelho se o item j· est· no leil„o
+				// Atualiza a cor do item para vermelho se o item j√° est√° no leil√£o
 				bb->m_GCObj.dwColor = 0xFFFFFFFF;
 
 			}
@@ -1171,7 +1171,7 @@ SendOneMessage((char*)&stReqBuy, sizeof(stReqBuy));*/
 //	pStartNegotiation sendPacket = {};
 //
 //	sendPacket.Header.ID = g_pObjectManager->m_dwCharID;
-//	sendPacket.Header.Type = MSG_ReqBuy_Opcode; // Tipo do pacote de negociaÁ„o
+//	sendPacket.Header.Type = MSG_ReqBuy_Opcode; // Tipo do pacote de negocia√ß√£o
 //	sendPacket.targetPlayerId = m_stAutoTrade.List[m_bCurrentSlotLeilao].OwnerId;
 //	sendPacket.itemSlot = m_bCurrentSlotLeilao;
 //	sendPacket.itemPrice = static_cast<int>(m_stAutoTrade.List[m_bCurrentSlotLeilao].Price);
@@ -1180,7 +1180,7 @@ SendOneMessage((char*)&stReqBuy, sizeof(stReqBuy));*/
 //	sendPacket.SlotBank = m_stAutoTrade.List[m_bCurrentSlotLeilao].SlotBank;
 //
 //	memcpy(&sendPacket.item, &m_stAutoTrade.List[m_bCurrentSlotLeilao].Item, sizeof(STRUCT_ITEM));
-//	printf("Pacote de inÌcio de negociaÁ„o preparado.\n"); 
+//	printf("Pacote de in√≠cio de negocia√ß√£o preparado.\n"); 
 //	SendOneMessage((char*)&sendPacket, sizeof(pStartNegotiation));
 //}
 
@@ -2827,7 +2827,7 @@ int TMFieldScene::InitializeScene()
 		unkpanel8->m_bVisible = 0;
 	
 
-	/*Variaveis::Fieldscene2 sistema leilao*/
+	/*Variables::Fieldscene2 auction system*/
 	m_pLeilaoStore = (SPanel*)m_pControlContainer->FindControl(3000011);
 
 	if (m_pLeilaoStore)
@@ -3900,7 +3900,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 				pMyGold->SetText(szText, 0);
 			}
 			break;
-			case 3: //Cria o mob para a loja do leil„o
+			case 3: //Cria o mob para a loja do leil√£o
 			{
 
 				if (m_pInputBG2)
@@ -4100,7 +4100,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		SetInVisibleInputCoin();
 		return 0;
 	}
-	//ESC INVENT¡RIO
+	//ESC INVENT√ÅRIO
 	if (idwControlID == B_INV_CLOSE)
 	{
 		SetVisibleInventory();
@@ -4603,8 +4603,8 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 
 
 
-/*BOTOES DO SISTEMA DE LEIL√O*/
-	if (idwControlID == 3000060u) // categoria donate
+/*AUCTION SYSTEM BUTTONS*/
+	if (idwControlID == 3000060u) // donation category
 	{
 		m_pGridLeilaoStore->Empty();
 		m_pGridLeilaoStore->m_eGridType = TMEGRIDTYPE::GRID_LEILAOSTORE;
@@ -4613,7 +4613,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		AltLeilaoAction(0);
 		return SendLeilaoRequest(m_bCurrentTipeLeilao, 0);
 	}
-	if (idwControlID == 3000061)// categoria gold
+	if (idwControlID == 3000061)// gold category
 	{
 		m_pGridLeilaoStore->Empty();
 		m_pGridLeilaoStore->m_eGridType = TMEGRIDTYPE::GRID_LEILAOSTORE;
@@ -4622,7 +4622,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		AltLeilaoAction(0);
 		return SendLeilaoRequest(m_bCurrentTipeLeilao, 0);
 	}
-	if (idwControlID == 3000062u)// categoria barras
+	if (idwControlID == 3000062u)// bar category
 	{
 		m_pGridLeilaoStore->Empty();
 		m_pGridLeilaoStore->m_eGridType = TMEGRIDTYPE::GRID_LEILAOSTORE;
@@ -4630,7 +4630,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		AltLeilaoAction(0);
 		return SendLeilaoRequest(m_bCurrentTipeLeilao, 0);
 	}
-	if (idwControlID == 3000063u)// categoria todos itens
+	if (idwControlID == 3000063u)// all items category
 	{
 		m_pGridLeilaoStore->Empty();
 		m_pGridLeilaoStore->m_eGridType = TMEGRIDTYPE::GRID_LEILAOSTORE;
@@ -4639,7 +4639,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		AltLeilaoAction(0);
 		return SendLeilaoRequest(m_bCurrentTipeLeilao, 0);
 	}
-	if (idwControlID == 3000064u)// categoria meus itens
+	if (idwControlID == 3000064u)// my items category
 	{
 		m_pGridLeilaoStore->Empty();
 		m_pGridLeilaoStore->m_eGridType = TMEGRIDTYPE::GRID_LEILAOSTORE;
@@ -4650,7 +4650,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		AltLeilaoAction(-1);
 		return SendLeilaoRequest(-1, 1);
 	} 
-	if (idwControlID == 3002212u)//get edit busca leilao
+	if (idwControlID == 3002212u)// focus search edit
 	{ 
 
 		auto BuscaleilaoStore = static_cast<SEditableText*>(m_pControlContainer->FindControl(3002213));
@@ -4669,7 +4669,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		AltLeilaoAction(-1); 
 		return 1;
 	}
-	if (idwControlID == 3000163) //close leilao store
+	if (idwControlID == 3000163) // close auction store
 	{
 		SetVisibleLeilaoAction(0, 0);
 		return 0;
@@ -4727,7 +4727,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 			{
 				Generico3->m_GCPanel.nTextureSetIndex = 280;
 			}
-			message = "Item agora disponÌvel para compra com donate (cash)!";
+			message = "Item agora dispon√≠vel para compra com donate (cash)!";
 			break;
 		}
 		case 2:
@@ -4744,7 +4744,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 			{
 				Generico3->m_GCPanel.nTextureSetIndex = 280;
 			}
-			message = "Item agora disponÌvel para compra com ouro!";
+			message = "Item agora dispon√≠vel para compra com ouro!";
 			break;
 		}
 		case 3:
@@ -4761,7 +4761,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 			{
 				Generico3->m_GCPanel.nTextureSetIndex = 246;
 			}
-			message = "Item agora disponÌvel para compra com barras de ouro!";
+			message = "Item agora dispon√≠vel para compra com barras de ouro!";
 			break;
 		}
 		default:
@@ -4777,12 +4777,12 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		m_stAutoTrade.List[m_bCurrentSlotLeilao].Categoria = m_bCurrentTipeLeilao;
 		return 1;
 	}
-	if (idwControlID == 3010060)//idwControlID do Bot„o ID
+	if (idwControlID == 3010060)//idwControlID do Bot√£o ID
 	{
 		LeilaoStoreNextPage();
 		return 1;
 	}
-	if (idwControlID == 3010061)//idwControlID do Bot„o ID
+	if (idwControlID == 3010061)//idwControlID do Bot√£o ID
 	{
 		std::cout << "\n m_bCurrentTipeLeilao " << m_bCurrentTipeLeilao;
 		LeilaoStorePreviousPage();
@@ -4879,7 +4879,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 				auto pGridLeilaoStore = m_pGridLeilaoStore;
 
 				if (!pGridLeilaoStore) {
-					std::cout << "Grid de Leil„o n„o encontrado!" << std::endl;
+					std::cout << "Grid de Leil√£o n√£o encontrado!" << std::endl;
 					return 1;
 				}
 
@@ -4894,7 +4894,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 
 				pAddItemAutoTrade SendPacket = {};
 				if (!pCargoItem) {
-					std::cout << "Item no Cargo n„o encontrado!" << std::endl;
+					std::cout << "Item no Cargo n√£o encontrado!" << std::endl;
 					return 1;
 				}
 
@@ -4932,7 +4932,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 		}
 		return 1;
 	}
-/*BOTOES DO SISTEMA DE LEIL√O*/
+/*AUCTION SYSTEM BUTTONS*/
 
 
 
@@ -7041,7 +7041,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 			}
 		}
 	}break;
-	case 1919431: //Ranking - AvanÁar
+	case 1919431: //Ranking - Avan√ßar
 	{
 		char Evolution[5][15] = { "Mortal", "Arch", "Celestial", "CelestialCS", "SubCelestial" };
 		char Classe[4][4] = { "TK", "FM", "BM", "HT" };
@@ -8245,7 +8245,7 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 
 		NewWindowTX1->SetText(strFmt("Armas"), 0);
 		NewWindowTX2->SetText(strFmt("Sets"), 0);
-		NewWindowTX3->SetText(strFmt("Refin·veis"), 0);
+		NewWindowTX3->SetText(strFmt("Refin√°veis"), 0);
 		NewWindowTX4->SetText(strFmt("Quests"), 0);
 		NewWindowTX5->SetText(strFmt(""), 0);
 		NewWindowTX6->SetText(strFmt(""), 0);
@@ -8542,7 +8542,7 @@ int TMFieldScene::OnKeyDownEvent(unsigned int iKeyCode)
 
 			NewWindowTX1->SetText("Armas", 0);
 			NewWindowTX2->SetText("Sets", 0);
-			NewWindowTX3->SetText("Refin·veis", 0);
+			NewWindowTX3->SetText("Refin√°veis", 0);
 			NewWindowTX4->SetText("Quests", 0);
 			NewWindowTX5->SetText("", 0);
 			NewWindowTX6->SetText("", 0);
@@ -13825,7 +13825,7 @@ int TMFieldScene::MouseClick_NPC(int nX, int nY, D3DXVECTOR3 vec, unsigned int d
 	if (dwServerTime - m_dwNPCClickTime < 1000)
 		return 1;
 
-	/*Quando clica no  npc para abrir a loja de outro usuario no leilao*/
+	/*Opens another player's shop in the auction when clicking the NPC*/
 	if (pOver->m_TradeDesc[0])
 	{
 
@@ -20363,7 +20363,7 @@ int TMFieldScene::OnKeyGuildOnOff(char iCharCode, int lParam)
 int TMFieldScene::OnKeyShortSkill(char iCharCode, int lParam)
 {
 	if ((iCharCode < '0' || iCharCode > '9') && iCharCode != '!' && iCharCode != '@' && 
-		iCharCode != '#' && iCharCode != '$' && iCharCode != '%' && iCharCode != '®' && 
+		iCharCode != '#' && iCharCode != '$' && iCharCode != '%' && iCharCode != '¬®' && 
 		iCharCode != '&' && iCharCode != '*' && iCharCode != '(' && iCharCode != ')')
 	{
 		return 0;
@@ -20400,7 +20400,7 @@ int TMFieldScene::OnKeyShortSkill(char iCharCode, int lParam)
 		case '%':
 			g_pObjectManager->m_cSelectShortSkill = 4;
 			break;
-		case '®':
+		case '¬®':
 			g_pObjectManager->m_cSelectShortSkill = 5;
 			break;
 		case '&':
@@ -22446,35 +22446,35 @@ int TMFieldScene::OnPacketUpdateRecaptcha(MSG_STANDARD* pStd)
 
 	if (g_pClientInfo->Info.Keys[45] == 0) {
 		char Keywords[30][7] = {
-		"BIKE", "AVI√O", "BIKE", "CARRO", "NAVIO",
-		"CARRO", "BIKE", "AVI√O", "MOTO", "MOTO",
-		"BIKE", "BIKE", "AVI√O", "TREM", "BIKE",
-		"AVI√O", "BIKE", "CARRO", "NAVIO", "NAVIO",
-		"NAVIO", "MOTO", "TREM", "TREM", "AVI√O",
-		"TREM", "NAVIO", "AVI√O", "NAVIO", "MOTO"
+		"BIKE", "AVI√ÉO", "BIKE", "CARRO", "NAVIO",
+		"CARRO", "BIKE", "AVI√ÉO", "MOTO", "MOTO",
+		"BIKE", "BIKE", "AVI√ÉO", "TREM", "BIKE",
+		"AVI√ÉO", "BIKE", "CARRO", "NAVIO", "NAVIO",
+		"NAVIO", "MOTO", "TREM", "TREM", "AVI√ÉO",
+		"TREM", "NAVIO", "AVI√ÉO", "NAVIO", "MOTO"
 		};
 
 		strncpy(Word, Keywords[p->word], 7);
 	}
 	if (g_pClientInfo->Info.Keys[45] == 1) {
 		char Keywords1[30][7] = {
-		"TREM", "BIKE", "CARRO", "BIKE", "AVI√O",
+		"TREM", "BIKE", "CARRO", "BIKE", "AVI√ÉO",
 		"TREM", "BIKE", "NAVIO", "MOTO", "BIKE",
-		"CARRO", "MOTO", "NAVIO", "AVI√O", "BIKE",
-		"AVI√O", "CARRO", "MOTO", "TREM", "MOTO",
-		"BIKE", "AVI√O", "BIKE", "NAVIO", "NAVIO",
-		"AVI√O", "NAVIO", "AVI√O", "NAVIO", "NAVIO"
+		"CARRO", "MOTO", "NAVIO", "AVI√ÉO", "BIKE",
+		"AVI√ÉO", "CARRO", "MOTO", "TREM", "MOTO",
+		"BIKE", "AVI√ÉO", "BIKE", "NAVIO", "NAVIO",
+		"AVI√ÉO", "NAVIO", "AVI√ÉO", "NAVIO", "NAVIO"
 		};
 		strncpy(Word, Keywords1[p->word], 7);
 	}
 	if (g_pClientInfo->Info.Keys[45] == 2) {
 		char Keywords2[30][7] = {
-		"BIKE", "MOTO", "AVI√O", "BIKE", "AVI√O",
-		"AVI√O", "MOTO", "TREM", "NAVIO", "MOTO",
+		"BIKE", "MOTO", "AVI√ÉO", "BIKE", "AVI√ÉO",
+		"AVI√ÉO", "MOTO", "TREM", "NAVIO", "MOTO",
 		"CARRO", "TREM", "CARRO", "BIKE", "CARRO",
-		"NAVIO", "AVI√O", "AVI√O", "BIKE", "BIKE",
+		"NAVIO", "AVI√ÉO", "AVI√ÉO", "BIKE", "BIKE",
 		"MOTO", "BIKE", "BIKE", "NAVIO", "MOTO",
-		"NAVIO", "NAVIO", "AVI√O", "TREM", "AVI√O"
+		"NAVIO", "NAVIO", "AVI√ÉO", "TREM", "AVI√ÉO"
 		};
 		strncpy(Word, Keywords2[p->word], 7);
 	}
@@ -22485,7 +22485,7 @@ int TMFieldScene::OnPacketUpdateRecaptcha(MSG_STANDARD* pStd)
 	Desc->SetText(strFmt("Clique na imagem que represente um(a): [%s]", Word), 0);
 
 	auto Desc2 = (SText*)m_pControlContainer->FindControl(1319003);
-	Desc2->SetText(strFmt("[ATEN«√O] A prÛxima tentativa ser· somente em 2 minutos"), 0);
+	Desc2->SetText(strFmt("[ATEN√á√ÉO] A pr√≥xima tentativa ser√° somente em 2 minutos"), 0);
 
 	auto PainelInv = (SPanel*)m_pControlContainer->FindControl(589832);
 	PainelInv->SetVisible(0);
@@ -22518,7 +22518,7 @@ int TMFieldScene::OnPacketSendRanking(MSG_STANDARD* pStd)
 		auto Level = (SText*)m_pControlContainer->FindControl(1919403);
 		Level->SetText(strFmt("Level"), 0);
 		auto Evo = (SText*)m_pControlContainer->FindControl(1919404);
-		Evo->SetText(strFmt("EvoluÁ„o"), 0);
+		Evo->SetText(strFmt("Evolu√ß√£o"), 0);
 		auto Class = (SText*)m_pControlContainer->FindControl(1919404);
 		Class->SetText(strFmt("Classe"), 0);
 
@@ -22556,7 +22556,7 @@ int TMFieldScene::OnPacketSendRanking(MSG_STANDARD* pStd)
 		auto PvP = (SText*)m_pControlContainer->FindControl(1919403);
 		PvP->SetText(strFmt("PvP"), 0);
 		auto Evo = (SText*)m_pControlContainer->FindControl(1919404);
-		Evo->SetText(strFmt("EvoluÁ„o"), 0);
+		Evo->SetText(strFmt("Evolu√ß√£o"), 0);
 		auto Class = (SText*)m_pControlContainer->FindControl(1919404);
 		Class->SetText(strFmt("Classe"), 0);
 
@@ -23298,7 +23298,7 @@ int TMFieldScene::OnPacketShopList(MSG_STANDARD* pStd)
 			}
 
 			auto ItemPrice = (SText*)m_pControlContainer->FindControl(999321 + i);
-			// preÁo dos itens
+			// pre√ßo dos itens
 			for (int y = 0; y < 3; y++) {
 				if (pShopList->List[i].stEffect[y].cEffect == 91) {
 					ItemPrice->SetText(strFmt("%d", pShopList->List[i].stEffect[y].cValue), 0);
@@ -24228,7 +24228,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 		if (pAttacker != m_pMyHuman || pAttack->FlagLocal == 1 && pAttacker == m_pMyHuman || !pAttack->FlagLocal && 
 			pAttacker == m_pMyHuman && (unsigned char)pAttack->Motion == 254)
 		{
-			if (pAttack->SkillIndex == 4) // PossuÌdo
+			if (pAttack->SkillIndex == 4) // Possu√≠do
 			{
 				pAttacker->m_cPunish = 1;
 				pAttacker->m_dwPunishedTime = g_pTimerManager->GetServerTime();
@@ -24251,7 +24251,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 					fAngle = atan2f(pTarget->m_vecPosition.x - pAttacker->m_vecPosition.x, pTarget->m_vecPosition.y - pAttacker->m_vecPosition.y) + D3DXToRadian(90);
 			}
 
-			if (pAttack->SkillIndex == 98) // Canh„o Superior
+			if (pAttack->SkillIndex == 98) // Canh√£o Superior
 				fAngle = atan2f((float)pAttack->TargetX - pAttacker->m_vecPosition.x, (float)pAttack->TargetY - pAttacker->m_vecPosition.y) + D3DXToRadian(90);
 			if (pAttack->DoubleCritical & 1)
 				pAttacker->m_bDoubleAttack = 1;
@@ -24321,7 +24321,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 				if (pEffect && m_pEffectContainer)
 					m_pEffectContainer->AddChild(pEffect);
 			}
-			else if (pAttack->SkillIndex == 3) // PerseguiÁ„o
+			else if (pAttack->SkillIndex == 3) // Persegui√ß√£o
 			{
 				if (pAttacker)
 				{
@@ -24348,7 +24348,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 					GetSoundAndPlay(151, 0, 0);
 				}
 			}
-			else if (pAttack->SkillIndex == 45) // Arma M·gica
+			else if (pAttack->SkillIndex == 45) // Arma M√°gica
 			{
 				float fY = (float)pAttack->TargetY + 0.5f;
 				TMVector3 vecTarget{ (float)pAttack->TargetX + 0.5f, (float)GroundGetMask(TMVector2((float)pAttack->TargetX + 0.5f, fY)) * 0.1f, fY };
@@ -24606,7 +24606,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 			{
 				GetSoundAndPlay(34, 0, 0);
 			}
-			else if (pAttack->SkillIndex == 77) // MeditaÁ„o
+			else if (pAttack->SkillIndex == 77) // Medita√ß√£o
 			{
 				GetSoundAndPlay(36, 0, 0);
 			}
@@ -24646,7 +24646,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 					}
 				}
 			}
-			else if (pAttack->SkillIndex == 86) // Explos„o EtÈrea
+			else if (pAttack->SkillIndex == 86) // Explos√£o Et√©rea
 			{
 				if (pAttacker)
 				{
@@ -24826,7 +24826,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 
 				GetSoundAndPlay(1, 0, 0);
 			}
-			else if (pAttack->SkillIndex == 100) // RessureiÁ„o
+			else if (pAttack->SkillIndex == 100) // Ressurei√ß√£o
 			{
 				GetSoundAndPlay(156, 0, 0);
 			}
@@ -25672,7 +25672,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 												}
 												else if (bInScreen)
 												{
-													if (pAttack->SkillIndex < 0 || pAttack->SkillIndex > 150) // atk fÌsico
+													if (pAttack->SkillIndex < 0 || pAttack->SkillIndex > 150) // atk f√≠sico
 													{
 														pFont = new TMFont3(szStr, nTX + 20 - 10 * bViewHalf,
 															(int)(RenderDevice::m_fHeightRatio * 80.0f) +
@@ -25707,7 +25707,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 												m_pMyHuman->m_bCritical = 1;
 												if (bInScreen)
 												{
-													if (pAttack->SkillIndex < 0 || pAttack->SkillIndex > 150) // atk fÌsico
+													if (pAttack->SkillIndex < 0 || pAttack->SkillIndex > 150) // atk f√≠sico
 													{
 
 														pFont = new TMFont3(szStr, nTX + 20 - 10 * bViewHalf,
@@ -25750,7 +25750,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 												if (bInScreen)
 												{
 
-													if (pAttack->SkillIndex < 0 || pAttack->SkillIndex > 150) // atk fÌsico
+													if (pAttack->SkillIndex < 0 || pAttack->SkillIndex > 150) // atk f√≠sico
 													{
 														//pFont = new TMFont3(szStr, nTX,
 														//	(int)(RenderDevice::m_fHeightRatio * 80.0f) +
@@ -25812,7 +25812,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 											}
 											else if (bInScreen)
 											{
-												if (pAttack->SkillIndex < 0 || pAttack->SkillIndex > 150) // atk fÌsico
+												if (pAttack->SkillIndex < 0 || pAttack->SkillIndex > 150) // atk f√≠sico
 												{
 													pFont = new TMFont3(szStr, nTX,
 														(int)(RenderDevice::m_fHeightRatio * 40.0f) +

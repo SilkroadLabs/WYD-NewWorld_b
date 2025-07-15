@@ -281,7 +281,7 @@ private:
 
 
 
-/*Sistema Leilao Store*/
+/*Auction System Store*/
 public:
 	void UpdateElementesLeilaoStore();
 	int OnReceivingLeilaoStores(MSG_STANDARD* pStd);
@@ -846,8 +846,8 @@ public:
 	static int m_bCurrentSlotLeilao;
 	static int m_bCurrentTipeLeilao;
 	
-	static int m_nLeilaoStoreCurrentPage; // P·gina atual
-	static int m_nLeilaoStoreTotalPages;  // Total de p·ginas
+	static int m_nLeilaoStoreCurrentPage; // P√°gina atual
+	static int m_nLeilaoStoreTotalPages;  // Total de p√°ginas
 
 
 };
