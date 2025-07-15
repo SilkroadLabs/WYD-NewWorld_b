@@ -7,6 +7,7 @@
 #include "SGrid.h"
 #include "ItemEffect.h"
 #include "TMUtil.h"
+#include "ItemMixRules.h"
 
 CItemMix::CItemMix()
 {
@@ -1191,13 +1192,7 @@ int CItemMix::HardCode(SMessagePanel* MessagePanel, SGridControl** GridInvList)
             m_stCombineItem.CarryPos[1] % 15 % 5,
             m_stCombineItem.CarryPos[1] % 15 / 5
         );
-        if (Item
-            && (Item->m_pItem->sIndex >= 1901 && Item->m_pItem->sIndex <= 1910
-                || Item->m_pItem->sIndex >= 1234 && Item->m_pItem->sIndex <= 1237
-                || Item->m_pItem->sIndex >= 1369 && Item->m_pItem->sIndex <= 1372
-                || Item->m_pItem->sIndex >= 1519 && Item->m_pItem->sIndex <= 1522
-                || Item->m_pItem->sIndex >= 1669 && Item->m_pItem->sIndex <= 1672
-                || Item->m_pItem->sIndex == 1714))
+        if (Item && isSpecialMixItem(Item->m_pItem->sIndex))
         {
             MessagePanel->SetMessage(g_pMessageStringTable[274], 2000u);
             MessagePanel->SetVisible(1, 1);
@@ -1223,12 +1218,7 @@ int CItemMix::HardCode(SMessagePanel* MessagePanel, SGridControl** GridInvList)
 
             if (Item)
             {
-                if (Item->m_pItem->sIndex >= 1901 && Item->m_pItem->sIndex <= 1910
-                    || Item->m_pItem->sIndex >= 1234 && Item->m_pItem->sIndex <= 1237
-                    || Item->m_pItem->sIndex >= 1369 && Item->m_pItem->sIndex <= 1372
-                    || Item->m_pItem->sIndex >= 1519 && Item->m_pItem->sIndex <= 1522
-                    || Item->m_pItem->sIndex >= 1669 && Item->m_pItem->sIndex <= 1672
-                    || Item->m_pItem->sIndex == 1714)
+                if (isSpecialMixItem(Item->m_pItem->sIndex))
                 {
                     MessagePanel->SetMessage(g_pMessageStringTable[274], 2000u);
                     MessagePanel->SetVisible(1, 1);
@@ -1364,13 +1354,7 @@ int CItemMix::HardCode(SMessagePanel* MessagePanel, SGridControl** GridInvList)
             && Item->m_pItem->sIndex != 4127
             && Item->m_pItem->sIndex != 3448
             && Item->m_pItem->sIndex != 4043
-            && ((Item->m_pItem->sIndex < 1901 || Item->m_pItem->sIndex > 1910)
-                && (Item->m_pItem->sIndex < 1234 || Item->m_pItem->sIndex > 1237)
-                && (Item->m_pItem->sIndex < 1369 || Item->m_pItem->sIndex > 1372)
-                && (Item->m_pItem->sIndex < 1519 || Item->m_pItem->sIndex > 1522)
-                && (Item->m_pItem->sIndex < 1669 || Item->m_pItem->sIndex > 1672)
-                && Item->m_pItem->sIndex != 1714
-                || nItemSanc != 9))
+            && (!isSpecialMixItem(Item->m_pItem->sIndex) || nItemSanc != 9))
         {
             MessagePanel->SetMessage(g_pMessageStringTable[274], 2000u);
             MessagePanel->SetVisible(1, 1);
@@ -1378,70 +1362,12 @@ int CItemMix::HardCode(SMessagePanel* MessagePanel, SGridControl** GridInvList)
             return 0;
         }
 
-        if (Item->m_pItem->sIndex >= 1901 && Item->m_pItem->sIndex <= 1910
-            || Item->m_pItem->sIndex >= 1234 && Item->m_pItem->sIndex <= 1237
-            || Item->m_pItem->sIndex >= 1369 && Item->m_pItem->sIndex <= 1372
-            || Item->m_pItem->sIndex >= 1519 && Item->m_pItem->sIndex <= 1522
-            || Item->m_pItem->sIndex >= 1669 && Item->m_pItem->sIndex <= 1672
-            || Item->m_pItem->sIndex == 1714)
+        if (isSpecialMixItem(Item->m_pItem->sIndex))
         {
             bool check = false;
             if (BASE_GetItemSanc(Item2->m_pItem) >= 15)
             {
-                if (Item->m_pItem->sIndex == 1901 && Item2->m_pItem->sIndex >= 2491 && Item2->m_pItem->sIndex <= 2494)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1902 && Item2->m_pItem->sIndex >= 2551 && Item2->m_pItem->sIndex <= 2554)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1903 && Item2->m_pItem->sIndex >= 2611 && Item2->m_pItem->sIndex <= 2614)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1904 && Item2->m_pItem->sIndex >= 2671 && Item2->m_pItem->sIndex <= 2674)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1905 && Item2->m_pItem->sIndex >= 2731 && Item2->m_pItem->sIndex <= 2734)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1906 && Item2->m_pItem->sIndex >= 2791 && Item2->m_pItem->sIndex <= 2794)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1907 && Item2->m_pItem->sIndex >= 2859 && Item2->m_pItem->sIndex <= 2862)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1908 && Item2->m_pItem->sIndex >= 2863 && Item2->m_pItem->sIndex <= 2866)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1909 && Item2->m_pItem->sIndex >= 2895 && Item2->m_pItem->sIndex <= 2898)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1910 && Item2->m_pItem->sIndex >= 2935 && Item2->m_pItem->sIndex <= 2938)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1234 && Item2->m_pItem->sIndex == 1221)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1235 && Item2->m_pItem->sIndex == 1222)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1236 && Item2->m_pItem->sIndex == 1223)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1237 && Item2->m_pItem->sIndex == 1224)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1369 && Item2->m_pItem->sIndex == 1356)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1370 && Item2->m_pItem->sIndex == 1357)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1371 && Item2->m_pItem->sIndex == 1358)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1372 && Item2->m_pItem->sIndex == 1359)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1519 && Item2->m_pItem->sIndex == 1506)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1520 && Item2->m_pItem->sIndex == 1507)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1521 && Item2->m_pItem->sIndex == 1508)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1522 && Item2->m_pItem->sIndex == 1509)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1669 && Item2->m_pItem->sIndex == 1656)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1670 && Item2->m_pItem->sIndex == 1657)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1671 && Item2->m_pItem->sIndex == 1658)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1672 && Item2->m_pItem->sIndex == 1659)
-                    check = true;
-                else if (Item->m_pItem->sIndex == 1714 && Item2->m_pItem->sIndex == 1711)
-                    check = true;
+                check = isValidPair(Item->m_pItem->sIndex, Item2->m_pItem->sIndex);
             }
             else
                 check = false;
@@ -1458,19 +1384,7 @@ int CItemMix::HardCode(SMessagePanel* MessagePanel, SGridControl** GridInvList)
                 m_stCombineItem.CarryPos[2] % 15 % 5,
                 m_stCombineItem.CarryPos[2] % 15 / 5);
 
-            bool checka = false;
-            if (Item->m_pItem->sIndex >= 1901 && Item->m_pItem->sIndex <= 1910 && Item3->m_pItem->sIndex == 772)
-                checka = true;
-            else if (Item->m_pItem->sIndex >= 1234 && Item->m_pItem->sIndex <= 1237 && Item3->m_pItem->sIndex == 542)
-                checka = true;
-            else if (Item->m_pItem->sIndex >= 1369 && Item->m_pItem->sIndex <= 1372 && Item3->m_pItem->sIndex == 542)
-                checka = true;
-            else if (Item->m_pItem->sIndex >= 1519 && Item->m_pItem->sIndex <= 1522 && Item3->m_pItem->sIndex == 542)
-                checka = true;
-            else if (Item->m_pItem->sIndex >= 1669 && Item->m_pItem->sIndex <= 1672 && Item3->m_pItem->sIndex == 542)
-                checka = true;
-            else if (Item->m_pItem->sIndex == 1714 && Item3->m_pItem->sIndex == 772)
-                checka = true;
+            bool checka = requiresThirdItem(Item->m_pItem->sIndex, Item3->m_pItem->sIndex);
 
             if (!checka)
             {
