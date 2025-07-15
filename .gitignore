@@ -1,0 +1,20 @@
+# Ignore release and build artifacts
+Release*/
+Build/
+
+# Ignore compiled binaries
+*.exe
+*.dll
+*.pdb
+*.lib
+*.so
+*.a
+
+# Ignore intermediate objects
+*.obj
+*.o
+
+# Misc generated files
+*.log
+*.tmp
+*.cache
