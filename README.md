@@ -1,4 +1,4 @@
-# Retro-WYD
+# 
 
 This repository contains the full source code for the **Retro-WYD** project. A complete overhaul of the TMProject with modern C++ practices. The codebase includes both client and server components used to build and run the game. Source files are organized in the following folders:
 
